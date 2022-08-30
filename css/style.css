@@ -4,6 +4,7 @@
 /* hotels css start */
 /* global start *********************************************************/
 /* Шрифты для hotel.ru *********************************************************/
+/* document.body.contentEditable = true */
 
 /* Hairline *********************************************************/
 @font-face {
@@ -171,20 +172,18 @@ p {
   margin: 0;
 }
 
-
-.reset-list {
+.reset_list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.reset-btn {
+.reset_btn {
   padding: 0%;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-
 
 .container {
   width: 1200px;
@@ -198,4 +197,26 @@ img {
   height: auto;
 }
 
+.header {
+  padding-top: 30px;
+}
 
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation {
+  
+  margin-left: auto;
+}
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item {
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 52px;
+}

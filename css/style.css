@@ -126,6 +126,24 @@
   font-style: normal;
 }
 
+:root {
+ 
+  --color-white-light: #ffffff;
+  --color-white-regular: #DADADA;
+  --color-white-medium: #E4E4E4;
+
+  --color-dark-light: #C4C4C4;
+  --color-dark-regular: #787878;
+  --color-dark-medium: #1C1C1C;
+  --color-dark-bold: #000000;
+
+  --color-blue-light: #71A7E2;
+  --color-blue-regular: #3172B9;
+  --color-blue-medium: #0E3B6C;
+  --color-blue-bold: #3474BA;
+
+}
+
 
 
 html {
@@ -141,7 +159,7 @@ html {
 body {
   min-width: 1200px;
   font-family: 'Open Sans', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--color-white-regular);
+  background-color: var(--color-white-light);
   cursor: default;
 }
 

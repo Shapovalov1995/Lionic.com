@@ -58,7 +58,8 @@
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-ExtraBoldItalic.eot");
   src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic"),
-    url("../fonts/OpenSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-ExtraBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
     url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"),
     url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff"),
     url("../fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype");
@@ -94,7 +95,8 @@
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-SemiBoldItalic.eot");
   src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"),
-    url("../fonts/OpenSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-SemiBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
     url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"),
     url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff"),
     url("../fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
@@ -166,13 +168,13 @@ p {
   outline: none;
 }
 
-.reset_list {
+.reset-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.reset_btn {
+.reset-btn {
   padding: 0%;
   border: none;
   background-color: transparent;
@@ -214,13 +216,13 @@ img {
 
   /* header */
 
-  --navigation__item-margin-righ: 52px;
+  --nav__item-margin-righ: 52px;
   --header__btn-margin-righ: 52px;
 
   /* btn */
 
   --header__btn-padding: 15px 35px;
-  --GenegalBanner__btn-padding: 19px 58px;
+  --topBanner__btn-padding: 19px 58px;
   --btn-border-radius: 4px;
 }
 
@@ -235,15 +237,17 @@ img {
   align-items: center;
 }
 
-.header__navigation {
+.header__nav {
   margin-left: auto;
 }
 
-.navigation__list {
+.nav__list {
   display: flex;
 }
-
-.navigation__link {
+.nav__item:not(:last-child) {
+  margin-right: var(--nav__item-margin-righ);
+}
+.nav__link {
   position: relative;
   font-family: "Open Sans";
   font-style: normal;
@@ -251,49 +255,44 @@ img {
   font-size: 15px;
   line-height: 15px;
   color: var(--color-dark-medium);
-  /* padding-bottom: 2px; */
 }
 
-.navigation__link::after {
+.nav__link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -3px;
   width: 100%;
   height: 2px;
   background-color: var(--color-blue-regular);
   transform: scaleX(0);
 }
 
-.navigation__link:focus-visible {
+.nav__link:focus-visible {
   outline: 1px solid var(--color-blue-light);
   outline-offset: 4px;
 }
 
-.navigation__link:hover::after {
+.nav__link:hover::after {
   transform: scale(1);
   transition: var(--transition-normal);
 }
 
-.navigation__link:active::after {
+.nav__link:active::after {
   transform: scale(1);
   transition: var(--transition-normal);
   background-color: var(--color-blue-bold);
   color: var(--color-blue-bold);
 }
 
-.navigation__link:hover {
+.nav__link:hover {
   transition: var(--transition-normal);
   color: var(--color-blue-regular);
 }
 
-.navigation__link:active {
+.nav__link:active {
   transition: var(--transition-normal);
   color: var(--color-blue-bold);
-}
-
-.navigation__item:not(:last-child) {
-  margin-right: var(--navigation__item-margin-righ);
 }
 
 .header__btn {
@@ -315,15 +314,16 @@ img {
   background-position: 100% 0;
   background-size: 200% 100%, auto;
   background-color: var(--color-blue-regular);
-
 }
 
 .btn:focus-visible {
   transition: all 0.5s ease;
-  background-image: linear-gradient(45deg,
-      var(--color-blue-regular) 0%,
-      var(--color-blue-light) 50%,
-      var(--color-blue-regular) 100%);
+  background-image: linear-gradient(
+    45deg,
+    var(--color-blue-regular) 0%,
+    var(--color-blue-light) 50%,
+    var(--color-blue-regular) 100%
+  );
   color: var(--color-white-light);
   background-repeat: no-repeat;
   background-position: -200% 0, 0 0;
@@ -333,10 +333,12 @@ img {
 
 .btn:hover {
   transition: var(--transition-faster);
-  background-image: linear-gradient(45deg,
-      var(--color-blue-regular) 0%,
-      var(--color-blue-light) 50%,
-      var(--color-blue-regular) 100%);
+  background-image: linear-gradient(
+    45deg,
+    var(--color-blue-regular) 0%,
+    var(--color-blue-light) 50%,
+    var(--color-blue-regular) 100%
+  );
   color: var(--color-white-light);
   background-repeat: no-repeat;
   background-position: -200% 0, 0 0;
@@ -348,55 +350,48 @@ img {
   background-color: var(--color-blue-light);
 }
 
-.GenegalBanner__btn {
-  padding: var(--GenegalBanner__btn-padding);
-  
+.topBanner__btn {
+  padding: var(--topBanner__btn-padding);
 }
 
-
-.GenegalBanner {
+.topBanner {
   padding-top: 30px;
 }
 
-
-.GenegalBanner__content {
+.topBanner__content {
   width: 1540px;
   min-height: 550px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
 
   padding-left: 9.7%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(91.25deg, rgb(255, 255, 255) 13.04%,
-      rgba(255, 255, 255, 0) 17.93%),
+  background-image: linear-gradient(
+      91.25deg,
+      rgb(255, 255, 255) 13.04%,
+      rgba(255, 255, 255, 0) 17.93%
+    ),
     url(../img/first-bg\ 1.jpg);
-
 }
 
-
-
-
-.GenegalBanner__title {
- 
+.topBanner__title {
   padding-top: 8.5%;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
   line-height: 130%;
-  color: #1C1C1C;
+  color: #1c1c1c;
   width: 529px;
 }
 
-.GenegalBanner__descriotion {
-
+.topBanner__descr {
   padding-top: 2%;
   margin-bottom: auto;
-  
-  font-family: 'Open Sans';
+
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -405,19 +400,16 @@ img {
   width: 471px;
 }
 
-
-.GenegalBanner__minicontent {
+.topBanner__blockbtn {
   margin-bottom: 10%;
 }
 
-
-.GenegalBanner__signature {
-  
+.topBanner__signature {
   padding-top: 14px;
   display: flex;
   justify-content: center;
 
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -426,6 +418,33 @@ img {
   color: #787878;
 }
 
-.signature__svg {
+.topBanner__svg {
   margin-right: 12px;
+}
+
+.services {
+  padding-top: 4.6%;
+}
+
+
+.services__title {
+  margin-bottom: 1.7%;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+  color: #1c1c1c;
+  
+}
+
+.services__descr {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #787878;
 }

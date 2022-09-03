@@ -230,6 +230,8 @@ img {
 
 .header {
   padding-top: 28px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #c4c4c4;
 }
 
 .header__container {
@@ -354,9 +356,9 @@ img {
   padding: var(--topBanner__btn-padding);
 }
 
-.topBanner {
-  padding-top: 30px;
-}
+/* .topBanner {
+  
+} */
 
 .topBanner__content {
   width: 1540px;
@@ -426,7 +428,6 @@ img {
   padding-top: 4.6%;
 }
 
-
 .services__title {
   margin-bottom: 1.7%;
   font-family: "Open Sans";
@@ -436,7 +437,6 @@ img {
   line-height: 130%;
   text-align: center;
   color: #1c1c1c;
-  
 }
 
 .services__descr {

@@ -5,6 +5,7 @@
 /* global start *********************************************************/
 /* Шрифты для lionic.com *********************************************************/
 /* document.body.contentEditable = true */
+/* https://jakearchibald.github.io/svgomg/ */
 
 @font-face {
   font-family: "Open Sans";
@@ -187,6 +188,10 @@ p {
   margin: 0 auto;
 }
 
+.word-break {
+  word-break: break-all;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -224,6 +229,9 @@ img {
   --header__btn-padding: 15px 35px;
   --topBanner__btn-padding: 19px 58px;
   --btn-border-radius: 4px;
+
+  /* services */
+  --services__item-padding: 60px 30px 60px 30px;
 }
 
 /* ************************* */
@@ -231,7 +239,7 @@ img {
 .header {
   padding-top: 28px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid var(--color-white-regular);
 }
 
 .header__container {
@@ -249,6 +257,7 @@ img {
 .nav__item:not(:last-child) {
   margin-right: var(--nav__item-margin-righ);
 }
+
 .nav__link {
   position: relative;
   font-family: "Open Sans";
@@ -426,6 +435,15 @@ img {
 
 .services {
   padding-top: 4.6%;
+  padding-bottom: 160px;
+  border-bottom: 1px solid var(--color-white-regular);
+  margin-bottom: 50px;
+}
+
+.services_list {
+  padding-top: 54px;
+  display: flex;
+  gap: 30px;
 }
 
 .services__title {
@@ -447,4 +465,55 @@ img {
   line-height: 22px;
   text-align: center;
   color: #787878;
+}
+
+.services__card {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--color-white-regular);
+  padding: var(--services__item-padding);
+  width: 270px;
+}
+
+.services__card:hover {
+  transition: var(--transition-normal);
+  background-color: var(--color-blue-regular);
+}
+
+.card:hover .card__title,
+.card:hover .card__descr {
+  color: var(--color-white-light);
+}
+
+
+
+.card__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  color: #1c1c1c;
+}
+
+.card__descr {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #787878;
+}
+
+.services__card svg {
+  margin-bottom: 27px;
+}
+
+.services__card p:not(:last-child) {
+  margin-bottom: 16px;
 }

@@ -478,7 +478,11 @@ img {
   width: 270px;
 }
 
-.services__card:hover {
+
+
+
+
+.card:hover {
   transition: var(--transition-normal);
   background-color: var(--color-blue-regular);
 }
@@ -486,6 +490,11 @@ img {
 .card:hover .card__title,
 .card:hover .card__descr {
   color: var(--color-white-light);
+  transition: var(--transition-normal);
+}
+.card:hover > svg > path {
+  fill: var(--color-white-light);
+  transition: var(--transition-normal);
 }
 
 

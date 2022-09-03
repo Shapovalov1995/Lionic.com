@@ -479,9 +479,6 @@ img {
 }
 
 
-
-
-
 .card:hover {
   transition: var(--transition-normal);
   background-color: var(--color-blue-regular);
@@ -496,7 +493,6 @@ img {
   fill: var(--color-white-light);
   transition: var(--transition-normal);
 }
-
 
 
 .card__title {

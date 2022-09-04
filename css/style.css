@@ -5,7 +5,8 @@
 /* global start *********************************************************/
 /* Шрифты для lionic.com *********************************************************/
 /* document.body.contentEditable = true */
-/* https://jakearchibald.github.io/svgomg/ */
+/* https://jakearchibald.github.io/svgomg */
+/* https://codepen.io/arman_bag/pen/ZdXRqz */
 
 @font-face {
   font-family: "Open Sans";
@@ -370,13 +371,8 @@ img {
 } */
 
 .topBanner__content {
-  width: 1540px;
   min-height: 550px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  padding-left: 9.7%;
+ 
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
@@ -400,7 +396,7 @@ img {
 
 .topBanner__descr {
   padding-top: 2%;
-  margin-bottom: auto;
+  margin-bottom: 34px;
 
   font-family: "Open Sans";
   font-style: normal;
@@ -417,8 +413,6 @@ img {
 
 .topBanner__signature {
   padding-top: 14px;
-  display: flex;
-  justify-content: center;
 
   font-family: "Open Sans";
   font-style: normal;
@@ -437,10 +431,10 @@ img {
   padding-top: 4.6%;
   padding-bottom: 160px;
   border-bottom: 1px solid var(--color-white-regular);
-  margin-bottom: 50px;
+  margin-bottom: 87px;
 }
 
-.services_list {
+.services__list {
   padding-top: 54px;
   display: flex;
   gap: 30px;
@@ -478,22 +472,18 @@ img {
   width: 270px;
 }
 
-
-.card:hover {
+.services__card:hover {
   transition: var(--transition-normal);
   background-color: var(--color-blue-regular);
 }
 
-.card:hover .card__title,
-.card:hover .card__descr {
+.services__card:hover .card__title,
+.services__card:hover .card__descr,
+.services__card:hover > svg > path {
   color: var(--color-white-light);
   transition: var(--transition-normal);
-}
-.card:hover > svg > path {
   fill: var(--color-white-light);
-  transition: var(--transition-normal);
 }
-
 
 .card__title {
   font-family: "Open Sans";
@@ -521,4 +511,118 @@ img {
 
 .services__card p:not(:last-child) {
   margin-bottom: 16px;
+}
+
+/* articles ***********************/
+
+.articles {
+  padding-bottom: 100px;
+}
+
+.articles__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 130%;
+  color: #1c1c1c;
+}
+.articles__list {
+  display: flex;
+  padding-top: 42px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.articles__card {
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  width: 570px;
+  min-height: 180px;
+}
+
+.articles__text {
+  border: 1px solid var(--color-white-regular);
+  border-radius: 0px 5px 5px 0px;
+  padding: 23px 30px;
+  border-left: none;
+  width: inherit;
+  min-height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.articles__text .text__time {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  color: #787878;
+}
+
+.text__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+}
+
+.articles__text .text__descr {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #787878;
+  width: 210px;
+}
+
+.articles__text:hover {
+  transition: var(--transition-normal);
+  border: 1px solid var(--color-blue-regular);
+  border-left: none;
+  background-color: var(--color-blue-regular);
+}
+
+.articles__text:active {
+  border: 1px solid var(--color-blue-bold);
+  border-left: none;
+  background-color: var(--color-blue-bold);
+}
+
+.articles__text:hover .text__time,
+.articles__text:hover .text__title,
+.articles__text:hover .text__descr {
+  color: var(--color-white-light);
+  transition: var(--transition-normal);
+}
+
+.articles__card .link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.articles__card .link:focus-visible::before {
+  outline: 1px solid var(--color-blue-regular);
+  outline-offset: 0px;
+  border-radius: 5px;
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

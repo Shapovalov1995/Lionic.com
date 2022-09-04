@@ -238,8 +238,8 @@ img {
 /* ************************* */
 
 .header {
-  padding-top: 28px;
-  padding-bottom: 30px;
+  padding-top: 33px;
+  padding-bottom: 26px;
   border-bottom: 1px solid var(--color-white-regular);
 }
 
@@ -362,17 +362,11 @@ img {
   background-color: var(--color-blue-light);
 }
 
-.topBanner__btn {
-  padding: var(--topBanner__btn-padding);
-}
-
-/* .topBanner {
-  
-} */
+/* topBanner *************/
 
 .topBanner__content {
   min-height: 550px;
- 
+
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
@@ -384,7 +378,7 @@ img {
 }
 
 .topBanner__title {
-  padding-top: 8.5%;
+  padding-top: 10%;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
@@ -393,7 +387,9 @@ img {
   color: #1c1c1c;
   width: 529px;
 }
-
+.topBanner__btn {
+  padding: var(--topBanner__btn-padding);
+}
 .topBanner__descr {
   padding-top: 2%;
   margin-bottom: 34px;
@@ -412,8 +408,11 @@ img {
 }
 
 .topBanner__signature {
-  padding-top: 14px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
 
+  padding-top: 14px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
@@ -625,4 +624,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.card__img {
+  width: max-content;
 }

@@ -130,6 +130,55 @@
   font-style: normal;
 }
 
+#toTop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  bottom: 30px;
+  right: -40px;
+  width: 48px;
+  height: 48px;
+  z-index: 1000;
+  cursor: pointer;
+  text-align: center;
+  color: var(--color-blue-bold);
+  border-radius: 30px;
+  background: var(--color-blue-bold);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-normal)
+}
+
+#toTop:hover {
+  background: var(--color-blue-regular);
+}
+
+#toTop:active {
+  background: var(--color-blue-light);
+}
+
+#toTop svg {
+  position: relative;
+  top: 13px;
+  right: 0px;
+  fill: var(--color-white-light);
+  transition: var(--transition-normal)
+}
+
+#toTop:hover svg {
+  cursor: pointer;
+  fill: var(--color-white-light);
+  transition: var(--transition-normal)
+}
+
+#toTop.show {
+  opacity: 85%;
+  visibility: visible;
+  right: calc(2%);
+}
+
 html {
   box-sizing: border-box;
 }

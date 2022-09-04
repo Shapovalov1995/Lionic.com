@@ -223,7 +223,7 @@ img {
   /* header */
 
   --nav__item-margin-righ: 52px;
-  --header__btn-margin-righ: 52px;
+  --header__btn-margin-righ: 56px;
 
   /* btn */
 
@@ -250,6 +250,7 @@ img {
 
 .header__nav {
   margin-left: auto;
+  padding-bottom: 8px;
 }
 
 .nav__list {
@@ -534,15 +535,18 @@ img {
 }
 
 .articles__card {
+
   position: relative;
   border-radius: 5px;
   display: flex;
   align-items: flex-start;
   width: 570px;
   min-height: 180px;
+  object-fit: cover;
 }
 
 .articles__text {
+ 
   border: 1px solid var(--color-white-regular);
   border-radius: 0px 5px 5px 0px;
   padding: 23px 30px;
@@ -627,5 +631,6 @@ img {
 }
 
 .card__img {
-  width: max-content;
+   
+  object-fit: cover;
 }

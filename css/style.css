@@ -579,6 +579,8 @@ img {
 }
 
 .articles__content {
+
+
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -594,15 +596,46 @@ img {
   border-radius: 5px;
   overflow: hidden;
 
+
+
 }
 
-.articles__card .card__image {
+.articles__card .text__titleLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.card__image {
+  
+}
+
+
+
+/* .articles__content .articles__card:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 170px;
-  min-height: 100%;
-  object-fit: cover;
-}
+  height: 100%;
+  transition: var(--transition-normal);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+  
+} */
 
-.card__text {
+
+
+
+
+
+.articles__card .card__text {
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -639,17 +672,22 @@ img {
 }
 
 .articles__card .card__text:hover {
+
   transition: var(--transition-normal);
   border: 1px solid var(--color-blue-regular);
   border-left: none;
   background-color: var(--color-blue-regular);
 }
 
+
+
+
 .articles__card .card__text:active {
 
   border: 1px solid var(--color-blue-bold);
   border-left: none;
   background-color: var(--color-blue-bold);
+
 }
 
 .articles__card .link:focus-visible::before {
@@ -672,14 +710,25 @@ img {
   transition: var(--transition-normal);
 }
 
-.articles__card .text__titleLink::before {
+
+
+
+/* 
+.articles__card .text__titleLink:hover::before {
+  
+  transition: var(--transition-normal);
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+ 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+  
+} */
+
 
 /* clients **********/
 
@@ -707,7 +756,8 @@ img {
 }
 
 .clients__list .clients__card {
-  
+  min-height: 362px;
+  position: relative;
   width: 370px;
   border-radius: 5px;
   padding: 51px 37px 32px 36px;
@@ -715,10 +765,20 @@ img {
 }
 
 .clients__card .comment__text {
-  
-  width: 280px;
+  width: 281px;
   font-weight: 400;
   font-size: 14px;
   line-height: 180%;
   color: #787878;
+}
+
+.clients__card .comment__text::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 36%;
+  width: 80%;
+  height: 1px;
+  background-color: var(--color-white-regular);
+  transform: scaleX(1);
 }

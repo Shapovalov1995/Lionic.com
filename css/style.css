@@ -477,7 +477,7 @@ img {
   padding-top: 7%;
   padding-bottom: 160px;
   border-bottom: 1px solid var(--color-white-regular);
-  
+
 }
 
 .services__list {
@@ -677,4 +677,30 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+
+
+/* clients **********/
+
+
+
+.clients {
+  padding-top: 12%;
+  padding-bottom: 41%;
+  margin-bottom: 100px;
+  border-bottom: 1px solid var(--color-white-regular);
+}
+
+.clients__title {
+
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 130%;
+  /* identical to box height, or 47px */
+
+
+  color: #1C1C1C;
 }

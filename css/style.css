@@ -608,7 +608,6 @@ img {
 }
 
 .articles__content .card__text:active::before {
-  transition: var(--transition-normal);
   opacity: 0.3;
 }
 

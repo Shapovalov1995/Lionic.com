@@ -68,10 +68,14 @@ $(document).ready(function () {
 
 // Scroll fixed header ******************************************************
 
-// $(document).on("scroll", function () {
-// 	if ($(document).scrollTop() > 100) {
-// 		$("header").addClass("small");
-// 	} else {
-// 		$("header").removeClass("small");
-// 	}
+
+
+
+// $(window).scroll(function () {
+//   var sc = $(window).scrollTop()
+//   if (sc > 100) {
+//       $("#header-sroll").addClass("small")
+//   } else {
+//       $("#header-sroll").removeClass("small")
+//   }
 // });

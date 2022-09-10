@@ -791,9 +791,36 @@ img {
 
 /* contacts ***********/
 
+address {
+  font-style: normal;
+}
+
+.contacts {
+  padding-bottom: 32%;
+  margin-bottom: 84px;
+  border-bottom: 1px solid var(--color-white-regular);
+}
+
 .contacts__title {
   font-weight: 300;
   font-size: 36px;
   line-height: 130%;
   color: #1c1c1c;
 }
+
+.contacts__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visit__text .text__title {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 180%;
+  color: #1c1c1c;
+}
+
+.visit__text {
+  display: grid;
+} 

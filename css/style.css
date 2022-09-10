@@ -728,8 +728,8 @@ img {
 
 .clients {
   padding-top: 7%;
-  padding-bottom: 30%;
-  margin-bottom: 100px;
+  padding-bottom: 12%;
+  margin-bottom: 84px;
   border-bottom: 1px solid var(--color-white-regular);
 }
 
@@ -775,11 +775,7 @@ img {
   margin-left: 18px;
 }
 
-/* .block__text p:not(:last-child) {
- margin-bottom: 1px;
-} */
-
-.block__text .name__title{
+.block__text .name__title {
   font-weight: 600;
   font-size: 17px;
   line-height: 180%;
@@ -790,7 +786,14 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 180%;
-  /* or 25px */
-
   color: #787878;
+}
+
+/* contacts ***********/
+
+.contacts__title {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 130%;
+  color: #1c1c1c;
 }

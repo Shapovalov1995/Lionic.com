@@ -921,3 +921,14 @@ address {
 input {
   /* border: none; */
 }
+
+
+.join-us__form .form__top{
+  display: flex;
+}
+
+
+.form__top .form__left{
+  display: flex;
+  
+}

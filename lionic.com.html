@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>lionic.com</title>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="lionic.js"></script>
 </head>
@@ -292,7 +293,7 @@
                     Clients
                 </div>
 
-                <ul class="reset-list clients__list">
+                <ul class="reset-list clients__list word-break">
 
                     <li class="clients__card comment">
 
@@ -383,7 +384,7 @@
                 </h2>
 
 
-                <div class="contacts__block">
+                <div class="contacts__block word-break">
 
 
                     <div class="contacts__card visit">
@@ -501,83 +502,60 @@
                 </p>
 
 
-                <form class="join-us__form top" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <form class="join-us__form top word-break" action="https://jsonplaceholder.typicode.com/posts"
+                    method="post">
 
-                    <div class="top__content content">
-
-
-                        <div class="content__block block">
-
-                            <div class="block__left element">
-
-                                <label for="name">
-                                    <input class="element__name" type="text" name="name" placeholder="Name" id="name"
-                                        required>
-                                </label>
+                    <div class="top__block block">
 
 
-                                <label for="email">
-                                    <input class="element__email" type="text" name="email" placeholder="E-mail"
-                                        id="email" required>
-                                </label>
 
 
-                                <label for="phone">
-                                    <input value="" id="phnoe" type="tel" class="element__phone" placeholder="Phone"
-                                        pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-                                        maxlength="50" required>
-
-                                </label>
-
-                                <label for="country">
+                        <div class="block__left element">
 
 
-                                    <select name="country" id="country" class="element__country" required>
-
-                                        <option value="" disabled selected> Country </option>
-                                        <option value="United Kingdom">United Kingdom</option>
-                                        <option value="United States">United States</option>
-                                        <option value="France">France</option>
-                                        <option value="Germany">Germany</option>
-                                        <option value="Spain">Spain</option>
-                                        <option value="Estonia">Estonia</option>
-
-                                    </select>
-
-                                </label>
-
-                            </div>
+                            <input class="element__name" type="text" name="name" placeholder="Name" id="input" required>
 
 
-                            <label for="comment">
+                            <input class="element__email" type="email" name="email" placeholder="E-mail" id="email"
+                                required>
 
-                                <div class="block__right element">
+                            <input class=" element__phone tel" id="phone" type="tel" name="phone" placeholder="Phone"
+                                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                maxlength="50" required>
 
-                                    <textarea class="element__comment" name="comment" placeholder="Comment"
-                                        id="comment"></textarea>
 
+                            <select class="element__country" name="country" id="country" required>
 
-                                </div>
-                            </label>
+                                <option value="" disabled selected> Country </option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States">United States</option>
+                                <option value="France">France</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Estonia">Estonia</option>
+
+                            </select>
 
 
                         </div>
 
 
 
+                        <div class="block__right element">
 
+                            <textarea class="element__comment" name="comment" placeholder="Comment"
+                                id="comment"></textarea>
 
-
-
-
-
+                        </div>
 
 
 
 
                     </div>
 
-
+                    <button class="reset-btn btn" id="text" formtarget="output">
+                        GET STARTED
+                    </button>
 
 
 

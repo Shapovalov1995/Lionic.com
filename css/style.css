@@ -9,7 +9,7 @@
 /* https://codepen.io/arman_bag/pen/ZdXRqz */
 /* https://htmlweb.ru/html/form/form_input_pattern.php
 https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js */
-
+/* https://ru.stackoverflow.com/questions/859518/jquery-validator-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BD%D0%B0-email-%D0%B8%D0%BB%D0%B8-%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0-%D0%B2-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BF%D0%BE%D0%BB%D0%B5-input */
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Italic.eot");
@@ -767,6 +767,7 @@ img {
 }
 
 .clients__card .comment__text {
+  word-break: normal;
   width: 281px;
   font-weight: 400;
   font-size: 14px;
@@ -918,17 +919,98 @@ address {
   margin-bottom: 5%;
 }
 
+
+
+
+/* #input {
+  border-bottom: 1px solid;
+  font-size: 1.1em;
+  padding: 0 0.1em 0.25em;
+} 
+.input {
+  display: flex;
+  align-items: center;
+  color: #616161;
+}
 input {
-  /* border: none; */
+  background: transparent !important;
+  outline: none;
+  border: none; 
+}
+
+#input:not(:placeholder-shown) {
+  border-color: #e53935;
+}
+#input:valid {
+  border-color: #00e676;
+} */
+
+
+/* <!-- <input type="email" value="" placeholder="name@email.com" required /> --> */
+
+
+
+
+
+.join-us__form {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.join-us__form .top__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__block .block__left {
+  gap: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 49%;
+}
+
+.top__block .block__right {
+  width: 49%;
+}
+
+.block__left .element__name,
+.block__left .element__email,
+.block__left .element__phone,
+.block__left .element__country {
+  opacity: 0.6;
+  border: 1px solid #dadada;
+  border-radius: 50px;
+  padding: 16px 28px;
+  width: 251px;
+  min-height: 60px;
+  box-sizing: border-box;
+ 
 }
 
 
-.join-us__form .form__top{
-  display: flex;
+
+.block__right .element__comment {
+  box-sizing: border-box;
+  opacity: 0.6;
+  border: 1px solid #dadada;
+  border-radius: 20px;
+  resize: none;
+  padding: 16px 28px;
+  width: 100%;
+  height: 100%;
+  word-break: normal;
 }
 
 
-.form__top .form__left{
-  display: flex;
+
+input[name]:valid {
+  border:1px solid green;
   
+  box-shadow: none;
+}
+
+input:invalid {
+  border:1px solid red;
+  box-shadow: none;
 }

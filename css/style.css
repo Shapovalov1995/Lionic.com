@@ -1004,13 +1004,14 @@ input {
 
 
 
-input[name]:valid {
+input[name="name"]:valid {
   border:1px solid green;
   
   box-shadow: none;
 }
 
-input:invalid {
+/* input[name]:invalid {
+  opacity: 1;
   border:1px solid red;
   box-shadow: none;
-}
+} */

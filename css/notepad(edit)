@@ -1,7 +1,7 @@
+/* 
 
-
-/* <iframe src="https://vk.com/video_ext.php?oid=-57846937&id=456258472&hash=4caa2729932ba544" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay;
- encrypted-media; fullscreen; picture-in-picture"></iframe>  */
+<iframe src="https://vk.com/video_ext.php?oid=-57846937&id=456258472&hash=4caa2729932ba544" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay;
+ encrypted-media; fullscreen; picture-in-picture"></iframe> 
 
 
 
@@ -40,8 +40,8 @@
   outline: 2px solid var(--color-blue-light);
 
 
- /* изменение ширины/ высоты или координат лучше заменить 
- на transform: scale или transform: translate (по ситуации) */
+ изменение ширины/ высоты или координат лучше заменить 
+ на transform: scale или transform: translate (по ситуации)
  
   top: 0px;
   right: 0px;
@@ -144,4 +144,4 @@ a.button1:active {
 a.button1:hover {
   transition: .5s linear;
   background-position: -200% 0, 0 0;
-} 
+}  */

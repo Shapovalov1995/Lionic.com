@@ -266,6 +266,7 @@ img {
 
   --transition-normal: all 0.3s ease-in-out;
   --transition-faster: all 0.3s linear;
+  --transition-valid: all 0.15s ease-in-out;
 
   /* header */
 
@@ -276,6 +277,9 @@ img {
 
   --header__btn-padding: 15px 35px;
   --topBanner__btn-padding: 19px 58px;
+  --form__btn-padding: 20px 67px 20px 67px;
+
+  --btn-border-radius-v2: 50px;
   --btn-border-radius: 4px;
 
   /* services */
@@ -919,9 +923,6 @@ address {
   margin-bottom: 5%;
 }
 
-
-
-
 /* #input {
   border-bottom: 1px solid;
   font-size: 1.1em;
@@ -945,24 +946,19 @@ input {
   border-color: #00e676;
 } */
 
-
 /* <!-- <input type="email" value="" placeholder="name@email.com" required /> --> */
-
-
-
-
 
 .join-us__form {
   padding-left: 55px;
   padding-right: 55px;
 }
 
-.join-us__form .top__block {
+.join-us__form .form__block {
   display: flex;
   justify-content: space-between;
 }
 
-.top__block .block__left {
+.form__block .block__left {
   gap: 17px;
   display: flex;
   flex-wrap: wrap;
@@ -970,7 +966,7 @@ input {
   width: 49%;
 }
 
-.top__block .block__right {
+.form__block .block__right {
   width: 49%;
 }
 
@@ -985,10 +981,7 @@ input {
   width: 251px;
   min-height: 60px;
   box-sizing: border-box;
- 
 }
-
-
 
 .block__right .element__comment {
   box-sizing: border-box;
@@ -1002,16 +995,31 @@ input {
   word-break: normal;
 }
 
-
-
-input[name="name"]:valid {
-  border:1px solid green;
-  
+/* input[name="name"]:valid {
+  border: 1px solid green;
+  transition: var(--transition-normal);
   box-shadow: none;
 }
 
-/* input[name]:invalid {
-  opacity: 1;
-  border:1px solid red;
+input[name="email"]:valid {
+  border: 1px solid green;
+  transition: var(--transition-normal);
   box-shadow: none;
+} */
+
+/* input[name="email"]:invalid {
+  transition: var(--transition-normal);
+  border: 1px solid red;
+  box-shadow: none;
+} */
+
+.join-us__form .form__btn {
+  width: 230px;
+  min-height: 60px;
+  padding: var(--form__btn-padding);
+  border-radius: var(--btn-border-radius-v2);
+}
+
+/* select {
+  padding-right: 50px;
 } */

@@ -74,17 +74,17 @@ $(document).ready(function () {
 //   }
 // });
 
-function setCursorPosition(pos, e) {
-  e.focus();
-  if (e.setSelectionRange) e.setSelectionRange(pos, pos);
-  else if (e.createTextRange) {
-    var range = e.createTextRange();
-    range.collapse(true);
-    range.moveEnd("character", pos);
-    range.moveStart("character", pos);
-    range.select();
-  }
-}
+// function setCursorPosition(pos, e) {
+//   e.focus();
+//   if (e.setSelectionRange) e.setSelectionRange(pos, pos);
+//   else if (e.createTextRange) {
+//     var range = e.createTextRange();
+//     range.collapse(true);
+//     range.moveEnd("character", pos);
+//     range.moveStart("character", pos);
+//     range.select();
+//   }
+// }
 
 // function mask(e) {
 //   //console.log('mask',e);
@@ -181,3 +181,26 @@ window.addEventListener("DOMContentLoaded", function () {
 
 //  ************
 
+// const select = new defaultSelect();
+
+// const element = document.querySelector(".selectCustom");
+// const choices = new Choices(element);
+
+// defaultSelect();
+
+
+
+
+
+  // const select = new defaultSelect = () => {
+
+  //   const element = document.querySelector(".selectCustom");
+  //   const choices = new Choices(element);
+
+  // }
+
+  // defaultSelect()
+
+
+  const element = document.querySelector('.element__country');
+  const choices = new Choices(element);

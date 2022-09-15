@@ -1054,7 +1054,7 @@ input[name="email"]:valid {
   cursor: pointer;
 }
 .choices[data-type*="select-one"] .choices__inner {
-  padding-bottom: 5%;
+  padding-bottom: 7px;
 }
 .choices[data-type*="select-one"] .choices__input {
   /* display: flex;
@@ -1102,13 +1102,13 @@ input[name="email"]:valid {
   border-width: 7px;
   position: absolute;
   right: 26px;
-  top: 50%;
+  top: 42%;
   transition: var(--transition-faster-eio);
   pointer-events: none;
 }
 .choices[data-type*="select-one"].is-open::after {
   transition: var(--transition-faster-eio);
-  top: 35%;
+  top: 27%;
   border-color: transparent transparent var(--color-dark-bold);
 }
 
@@ -1155,7 +1155,7 @@ input[name="email"]:valid {
   opacity: 0.6;
   width: 251px;
   background-color: var(--color-white-light);
-  padding: 16px 28px;
+  padding: 4px 28px;
   border: 1px solid var(--color-white-regular);
   border-radius: 50px;
   min-height: 60px;
@@ -1172,7 +1172,7 @@ input[name="email"]:valid {
   opacity: 0.6;
   width: 251px;
   background-color: var(--color-white-light);
-  padding: 16px 28px;
+  padding: 14px 28px;
   border: 1px solid var(--color-white-regular);
   border-radius: 50px;
   min-height: 60px;
@@ -1341,7 +1341,7 @@ input[name="email"]:valid {
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
 
-  line-height: 4px;
+
   background-color: #3172b9;
   color: white;
 }

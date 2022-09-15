@@ -265,6 +265,7 @@ img {
   /* transition */
 
   --transition-normal: all 0.3s ease-in-out;
+  --transition-faster-eio: all 0.1s ease-in-out;
   --transition-faster: all 0.3s linear;
   --transition-valid: all 0.15s ease-in-out;
 
@@ -1053,15 +1054,14 @@ input[name="email"]:valid {
   cursor: pointer;
 }
 .choices[data-type*="select-one"] .choices__inner {
-  /* padding-bottom: 7.5px; */
+  padding-bottom: 5%;
 }
 .choices[data-type*="select-one"] .choices__input {
-  display: block;
+  /* display: flex;
   width: 100%;
-  padding: 10px;
+
   border-bottom: 1px solid #ddd;
-  background-color: #fff;
-  margin: 0;
+  background-color: #fff; */
 }
 .choices[data-type*="select-one"] .choices__button {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjU5Mi4wNDRsMTguMzY0IDE4LjM2NC0yLjU0OCAyLjU0OEwuMDQ0IDIuNTkyeiIvPjxwYXRoIGQ9Ik0wIDE4LjM2NEwxOC4zNjQgMGwyLjU0OCAyLjU0OEwyLjU0OCAyMC45MTJ6Ii8+PC9nPjwvc3ZnPg==);
@@ -1089,25 +1089,31 @@ input[name="email"]:valid {
   .choices__button {
   display: none;
 }
+
+/* стрелка в инпуте **************************/
+
 .choices[data-type*="select-one"]::after {
   content: "";
   height: 0;
   width: 0;
   border-style: solid;
   border-color: var(--color-dark-bold) transparent transparent;
-  opacity: 0.3;
+  opacity: 0.5;
   border-width: 7px;
   position: absolute;
   right: 26px;
   top: 50%;
-
+  transition: var(--transition-faster-eio);
   pointer-events: none;
 }
 .choices[data-type*="select-one"].is-open::after {
-
+  transition: var(--transition-faster-eio);
   top: 35%;
   border-color: transparent transparent var(--color-dark-bold);
 }
+
+/* стрелка в инпуте end **************************/
+
 .choices[data-type*="select-one"][dir="rtl"]::after {
   left: 11.5px;
   right: auto;
@@ -1157,15 +1163,20 @@ input[name="email"]:valid {
   box-sizing: border-box;
 }
 
-/* кнопка выпдения нижняя */
+/* кнопка выпдения нижняя *************/
 .is-focused .choices__inner,
 .is-open .choices__inner {
+  display: flex;
+  align-items: center;
+  vertical-align: top;
   opacity: 0.6;
-  border: 1px solid #dadada;
-  border-radius: 50px;
-  padding: 16px 28px;
   width: 251px;
+  background-color: var(--color-white-light);
+  padding: 16px 28px;
+  border: 1px solid var(--color-white-regular);
+  border-radius: 50px;
   min-height: 60px;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -1179,9 +1190,7 @@ input[name="email"]:valid {
   list-style: none;
 }
 .choices__list--single {
-  /* display: inline-block;
-  padding: 4px 16px 4px 4px;
-  width: 100%; */
+  display: inline-flex;
 }
 [dir="rtl"] .choices__list--single {
   padding-right: 4px;
@@ -1223,6 +1232,9 @@ input[name="email"]:valid {
   background-color: #aaa;
   border: 1px solid #919191;
 }
+
+/* выпадающий список ********/
+
 .choices__list--dropdown,
 .choices__list[aria-expanded] {
   visibility: hidden;
@@ -1232,12 +1244,31 @@ input[name="email"]:valid {
   background-color: #fff;
   border: 1px solid #ddd;
   top: 100%;
-  margin-top: -1px;
-  border-bottom-left-radius: 2.5px;
-  border-bottom-right-radius: 2.5px;
+  margin-top: 3px;
+
   overflow: hidden;
   word-break: break-all;
   will-change: visibility;
+
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+
+
+  color: #000000;
+
+  background: #ffffff;
+  box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+
+
+
+
+
+
 }
 .is-active.choices__list--dropdown,
 .is-active.choices__list[aria-expanded] {
@@ -1245,21 +1276,19 @@ input[name="email"]:valid {
 }
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
-  border-color: #b7b7b7;
-}
-.is-flipped .choices__list--dropdown,
-.is-flipped .choices__list[aria-expanded] {
-  top: auto;
-  bottom: 100%;
-  margin-top: 0;
-  margin-bottom: 2px;
-  width: 208px;
-  height: 223px;
 
 
   background: #ffffff;
   box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+}
+.is-flipped .choices__list--dropdown,
+.is-flipped .choices__list[aria-expanded] {
+
+
+
+
+
 }
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
@@ -1306,11 +1335,15 @@ input[name="email"]:valid {
     left: 10px;
   }
 }
+
+/* фокус инпутов  */
+
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+
+  line-height: 4px;
   background-color: #3172b9;
   color: white;
-  transition: var(--transition-normal);
 }
 .choices__list--dropdown .choices__item--selectable.is-highlighted::after,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
@@ -1376,8 +1409,17 @@ input[name="email"]:valid {
   padding-right: 2px;
   padding-left: 0;
 }
+
+/* placeholder *********************************/
 .choices__placeholder {
-  opacity: 0.6;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  /* identical to box height, or 29px */
+
+  color: #000000;
 }
 
 /* select end ************/

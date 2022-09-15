@@ -982,7 +982,6 @@ input {
   box-sizing: border-box;
 }
 
-
 .block__right .element__comment {
   box-sizing: border-box;
   opacity: 0.6;
@@ -1020,9 +1019,9 @@ input[name="email"]:valid {
   border-radius: var(--btn-border-radius-v2);
 }
 
- /* select start ************/
+/* select start ************/
 
- .choices {
+.choices {
   position: relative;
   overflow: hidden;
   margin-bottom: 24px;
@@ -1054,7 +1053,7 @@ input[name="email"]:valid {
   cursor: pointer;
 }
 .choices[data-type*="select-one"] .choices__inner {
-  padding-bottom: 7.5px;
+  /* padding-bottom: 7.5px; */
 }
 .choices[data-type*="select-one"] .choices__input {
   display: block;
@@ -1095,17 +1094,19 @@ input[name="email"]:valid {
   height: 0;
   width: 0;
   border-style: solid;
-  border-color: #333 transparent transparent;
-  border-width: 5px;
+  border-color: var(--color-dark-bold) transparent transparent;
+  opacity: 0.3;
+  border-width: 7px;
   position: absolute;
-  right: 11.5px;
+  right: 26px;
   top: 50%;
-  margin-top: -2.5px;
+
   pointer-events: none;
 }
 .choices[data-type*="select-one"].is-open::after {
-  border-color: transparent transparent #333;
-  margin-top: -7.5px;
+
+  top: 35%;
+  border-color: transparent transparent var(--color-dark-bold);
 }
 .choices[data-type*="select-one"][dir="rtl"]::after {
   left: 11.5px;
@@ -1142,36 +1143,45 @@ input[name="email"]:valid {
   opacity: 1;
 }
 .choices__inner {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   vertical-align: top;
-  width: 100%;
-  background-color: #f9f9f9;
-  padding: 7.5px 7.5px 3.75px;
-  border: 1px solid #ddd;
-  border-radius: 2.5px;
-  font-size: 14px;
-  min-height: 44px;
+  opacity: 0.6;
+  width: 251px;
+  background-color: var(--color-white-light);
+  padding: 16px 28px;
+  border: 1px solid var(--color-white-regular);
+  border-radius: 50px;
+  min-height: 60px;
   overflow: hidden;
+  box-sizing: border-box;
 }
+
+/* кнопка выпдения нижняя */
 .is-focused .choices__inner,
 .is-open .choices__inner {
-  border-color: #b7b7b7;
+  opacity: 0.6;
+  border: 1px solid #dadada;
+  border-radius: 50px;
+  padding: 16px 28px;
+  width: 251px;
+  min-height: 60px;
+  box-sizing: border-box;
 }
-.is-open .choices__inner {
-  border-radius: 2.5px 2.5px 0 0;
-}
-.is-flipped.is-open .choices__inner {
-  border-radius: 0 0 2.5px 2.5px;
-}
+
+/* .is-flipped.is-open .choices__inner {
+  border-radius: 50;
+} */
+
 .choices__list {
   margin: 0;
   padding-left: 0;
   list-style: none;
 }
 .choices__list--single {
-  display: inline-block;
+  /* display: inline-block;
   padding: 4px 16px 4px 4px;
-  width: 100%;
+  width: 100%; */
 }
 [dir="rtl"] .choices__list--single {
   padding-right: 4px;
@@ -1242,8 +1252,14 @@ input[name="email"]:valid {
   top: auto;
   bottom: 100%;
   margin-top: 0;
-  margin-bottom: -1px;
-  border-radius: 0.25rem 0.25rem 0 0;
+  margin-bottom: 2px;
+  width: 208px;
+  height: 223px;
+
+
+  background: #ffffff;
+  box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
@@ -1292,7 +1308,9 @@ input[name="email"]:valid {
 }
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-  background-color: #f2f2f2;
+  background-color: #3172b9;
+  color: white;
+  transition: var(--transition-normal);
 }
 .choices__list--dropdown .choices__item--selectable.is-highlighted::after,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
@@ -1359,7 +1377,7 @@ input[name="email"]:valid {
   padding-left: 0;
 }
 .choices__placeholder {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
- /* select end ************/
+/* select end ************/

@@ -179,28 +179,9 @@ window.addEventListener("DOMContentLoaded", function () {
 //   });
 // });
 
-//  ************
+// select country
 
-// const select = new defaultSelect();
-
-// const element = document.querySelector(".selectCustom");
-// const choices = new Choices(element);
-
-// defaultSelect();
-
-
-
-
-
-  // const select = new defaultSelect = () => {
-
-  //   const element = document.querySelector(".selectCustom");
-  //   const choices = new Choices(element);
-
-  // }
-
-  // defaultSelect()
-
-
-  const element = document.querySelector('.element__country');
-  const choices = new Choices(element);
+const element = document.querySelector(".element__country");
+const choices = new Choices(element, {
+  searchEnabled: false,
+});

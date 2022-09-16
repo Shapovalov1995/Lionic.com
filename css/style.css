@@ -1018,11 +1018,42 @@ input[name="email"]:valid {
   box-shadow: none;
 } */
 
-.join-us__form .button__form{
+.join-us__form .form__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-us__form .button__form {
   width: 230px;
   min-height: 60px;
   padding: var(--button__form-padding);
   border-radius: var(--btn-border-radius-v2);
+  margin-bottom: 12px;
+}
+
+.button__agreement {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #787878;
+  padding-top: 0.5px;
+}
+
+.agreement__checkbox {
+  margin-right: 8px;
+}
+
+.agreement__link {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-blue-regular);
+  margin-left: 4px;
 }
 
 /* select start ************/
@@ -1306,7 +1337,6 @@ input[name="email"]:valid {
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-
   transition: var(--transition-faster-eio);
   background-color: #3172b9;
   color: white;
@@ -1349,7 +1379,6 @@ input[name="email"]:valid {
   outline: 0;
 }
 .choices__input {
-
 }
 .choices__input::-webkit-search-cancel-button,
 .choices__input::-webkit-search-decoration,

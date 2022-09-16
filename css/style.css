@@ -1256,13 +1256,13 @@ input[name="email"]:valid {
   background: #ffffff;
   box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  margin-top: 4px;
 }
 .is-flipped .choices__list--dropdown,
 .is-flipped .choices__list[aria-expanded] {
   top: auto;
   bottom: 100%;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 /* высота выпдаающего списка  */

@@ -1033,17 +1033,11 @@ input[name="email"]:valid {
   margin-bottom: 12px;
 }
 
-.button__agreement {
-  display: flex;
+.test {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #787878;
-  padding-top: 0.5px;
-}
-
-.agreement__checkbox {
-  margin-right: 8px;
 }
 
 .agreement__link {
@@ -1053,7 +1047,56 @@ input[name="email"]:valid {
   font-size: 12px;
   line-height: 16px;
   color: var(--color-blue-regular);
-  margin-left: 4px;
+}
+
+.agreement__link:hover {
+  color: var(--color-blue-light);
+}
+.agreement__link:active {
+  color: var(--color-blue-bold);
+}
+
+/* agreement-checkbox ************/
+
+.button__agreement {
+  cursor: pointer;
+  position: relative;
+  padding-left: 28px;
+}
+
+#agreement-checkbox {
+  display: none;
+}
+
+#agreement-checkbox + .agreement__checkbox-style {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  border: 1px solid var(--color-white-medium);
+
+}
+
+#agreement-checkbox + .agreement__checkbox-style::before {
+
+  /* content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transition: var(--transition-normal); */
+}
+
+#agreement-checkbox:checked + .agreement__checkbox-style::before {
+  opacity: 0;
 }
 
 /* select start ************/

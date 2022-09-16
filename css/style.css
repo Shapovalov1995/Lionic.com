@@ -278,7 +278,7 @@ img {
 
   --header__btn-padding: 15px 35px;
   --topBanner__btn-padding: 19px 58px;
-  --form__btn-padding: 20px 67px 20px 67px;
+  --button__form-padding: 20px 67px 20px 67px;
 
   --btn-border-radius-v2: 50px;
   --btn-border-radius: 4px;
@@ -901,7 +901,8 @@ address {
 
 .join-us {
   padding-top: 110px;
-  margin-bottom: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .join-us__title {
@@ -952,11 +953,15 @@ input {
 .join-us__form {
   padding-left: 55px;
   padding-right: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .join-us__form .form__block {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .form__block .block__left {
@@ -1013,10 +1018,10 @@ input[name="email"]:valid {
   box-shadow: none;
 } */
 
-.join-us__form .form__btn {
+.join-us__form .button__form{
   width: 230px;
   min-height: 60px;
-  padding: var(--form__btn-padding);
+  padding: var(--button__form-padding);
   border-radius: var(--btn-border-radius-v2);
 }
 
@@ -1054,7 +1059,7 @@ input[name="email"]:valid {
   cursor: pointer;
 }
 .choices[data-type*="select-one"] .choices__inner {
-  /* padding-bottom: 8px; */
+  padding-bottom: 8px;
 }
 
 /* Поиск  *************/
@@ -1163,7 +1168,7 @@ input[name="email"]:valid {
   opacity: 0.6;
   width: 251px;
   background-color: var(--color-white-light);
-  padding: 14px 28px;
+  padding: 5px 28px;
   border: 1px solid var(--color-white-regular);
   border-radius: 50px;
   min-height: 60px;
@@ -1171,9 +1176,9 @@ input[name="email"]:valid {
   box-sizing: border-box;
 }
 
-.is-focused .choices__inner,
+/* .is-focused .choices__inner,
 .is-open .choices__inner {
-}
+} */
 
 /* .is-flipped.is-open .choices__inner {
   border-radius: 50;
@@ -1269,7 +1274,7 @@ input[name="email"]:valid {
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
   position: relative;
-  max-height: 200px;
+  max-height: 310px;
 
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -1301,7 +1306,8 @@ input[name="email"]:valid {
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-  transition: all 0.2s ease-in-out;
+
+  transition: var(--transition-faster-eio);
   background-color: #3172b9;
   color: white;
 }
@@ -1343,15 +1349,7 @@ input[name="email"]:valid {
   outline: 0;
 }
 .choices__input {
-  display: inline-block;
-  vertical-align: baseline;
-  background-color: #f9f9f9;
-  font-size: 14px;
-  margin-bottom: 5px;
-  border: 0;
-  border-radius: 0;
-  max-width: 100%;
-  padding: 4px 0 4px 2px;
+
 }
 .choices__input::-webkit-search-cancel-button,
 .choices__input::-webkit-search-decoration,

@@ -196,6 +196,11 @@ body {
   font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-white-light);
   cursor: default;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
@@ -1018,6 +1023,8 @@ input[name="email"]:valid {
   box-shadow: none;
 } */
 
+/* form__button **********************************************/
+
 .join-us__form .form__button {
   display: flex;
   flex-direction: column;
@@ -1025,7 +1032,7 @@ input[name="email"]:valid {
   align-items: center;
 }
 
-.join-us__form .button__form {
+.form__button .button__form {
   width: 230px;
   min-height: 60px;
   padding: var(--button__form-padding);
@@ -1033,73 +1040,63 @@ input[name="email"]:valid {
   margin-bottom: 12px;
 }
 
-.test {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #787878;
+/* agreement-checkbox ******************************************/
+
+#agreement-checkbox-1 {
+  display: none;
 }
 
-.agreement__link {
+.button__agreement .agreement__link {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: var(--color-blue-regular);
+  margin-left: 4px;
+  text-decoration: underline;
 }
 
-.agreement__link:hover {
+.button__agreement .agreement__link:hover {
   color: var(--color-blue-light);
 }
-.agreement__link:active {
+.button__agreement .agreement__link:active {
   color: var(--color-blue-bold);
 }
 
-/* agreement-checkbox ************/
-
-.button__agreement {
+.form__button .button__agreement {
   cursor: pointer;
-  position: relative;
-  padding-left: 28px;
+  display: flex;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #787878;
 }
 
-#agreement-checkbox {
-  display: none;
-}
-
-#agreement-checkbox + .agreement__checkbox-style {
-  content: "";
-  position: absolute;
+.button__agreement .agreement__checkbox-style {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 1px;
-  left: 0;
+  margin-right: 8px;
   width: 14px;
   height: 14px;
-  text-align: center;
   border: 1px solid var(--color-white-medium);
-
 }
 
-#agreement-checkbox + .agreement__checkbox-style::before {
-
-  /* content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  transition: var(--transition-normal); */
-}
-
-#agreement-checkbox:checked + .agreement__checkbox-style::before {
+.button__agreement .agreement__checkbox-style > svg > path {
+  stroke: #3172b9;
+  stroke-width: 2;
   opacity: 0;
 }
 
-/* select start ************/
+#agreement-checkbox-1:checked + #agreement__checkbox-style > svg > path {
+  opacity: 1;
+}
+
+/* agreement-checkbox end ******************************************/
+/* select start ******************************************/
 
 .choices {
   position: relative;
@@ -1330,12 +1327,14 @@ input[name="email"]:valid {
 }
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 4px;
+  padding-bottom: 8px;
   background: #ffffff;
   box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin-top: 4px;
+  width: 208px;
+  margin-left: 24px;
 }
 .is-flipped .choices__list--dropdown,
 .is-flipped .choices__list[aria-expanded] {
@@ -1344,15 +1343,33 @@ input[name="email"]:valid {
   margin-bottom: 4px;
 }
 
-/* высота выпдаающего списка  */
+/* высота выпдаающего списка
+
+
+
+
+*/
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
   position: relative;
-  max-height: 310px;
+  max-height: 232px;
 
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
+}
+
+.choices__list::-webkit-scrollbar {
+  width: 8px;
+  /* ширина scrollbar */
+}
+.choices__list::-webkit-scrollbar-track {
+  background: #f4f4f4; /* цвет дорожки */
+}
+.choices__list::-webkit-scrollbar-thumb {
+  background-color: var(--color-white-regular); /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: none; /* padding вокруг плашки */
 }
 
 /* текст внутри  */
@@ -1365,8 +1382,8 @@ input[name="email"]:valid {
   font-weight: 400;
 
   padding: 10px;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 20px;
   color: #000000;
   padding-left: 14px;
 }

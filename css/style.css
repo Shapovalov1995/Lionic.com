@@ -739,7 +739,6 @@ img {
 .card__text:hover .text__title,
 .card__text:hover .text__descr {
   color: var(--color-white-light);
-  transition: var(--transition-normal);
 }
 
 /* clients **********/
@@ -883,6 +882,7 @@ address {
 .visit__text .text__tel:hover,
 .visit__text .text__email:hover {
   color: var(--color-blue-light);
+  transition: var(--transition-normal);
 }
 
 .visit__text .text__maplink:active,
@@ -1060,6 +1060,7 @@ input[name="email"]:valid {
 
 .button__agreement .agreement__link:hover {
   color: var(--color-blue-light);
+  transition: var(--transition-normal);
 }
 .button__agreement .agreement__link:active {
   color: var(--color-blue-bold);
@@ -1478,7 +1479,6 @@ input[name="email"]:valid {
   padding: 45px 0 45px 0;
 }
 
-
 .footer__logo {
   margin-right: auto;
 }
@@ -1486,7 +1486,6 @@ input[name="email"]:valid {
 .footer__caption {
   margin-left: 24px;
 }
-
 
 .footer__container {
   display: flex;
@@ -1497,7 +1496,6 @@ input[name="email"]:valid {
 .footer__nav {
   margin-left: 17%;
 }
-
 
 .footer__caption {
   font-weight: 400;
@@ -1568,6 +1566,44 @@ input[name="email"]:valid {
   margin-left: auto;
 }
 
-.footer__social svg:not(:last-child) {
+.footer__social {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.footer__social .link:not(:last-child) {
   margin-right: 28px;
+}
+
+.footer__social .in {
+  fill: var(--color-dark-bold);
+}
+
+/* hover */
+
+.footer__social .icon__twitter:hover > svg > path,
+.footer__social .in:hover {
+  fill: var(--color-blue-light);
+  transition: var(--transition-normal);
+}
+.footer__social .icon__mail:hover > svg > path {
+  stroke: var(--color-blue-light);
+  transition: var(--transition-normal);
+}
+
+/* active */
+
+.footer__social .icon__twitter:active > svg > path,
+.footer__social .in:active {
+  fill: var(--color-blue-regular);
+}
+.footer__social .icon__mail:active > svg > path {
+  stroke: var(--color-blue-regular);
+}
+/* focus */
+
+.footer__social .link:focus-visible {
+  outline-offset: 4px;
+  outline: 1px solid var(--color-blue-light);
 }

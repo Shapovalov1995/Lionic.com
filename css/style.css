@@ -1562,7 +1562,7 @@ input[name="email"]:valid {
 
 .footer__social {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-left: auto;
 }
 

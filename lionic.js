@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // При клике прокручиываем на самый верх
   btn.onclick = function (click) {
     click.preventDefault();
-    scrollTo(0, 0);
+    scrollTo(0, 700);
   };
 });
 
@@ -57,6 +57,23 @@ $(document).ready(function() {
   $("#submit").click(function() {
       $(location).prop("href", location.href);
   })
+});
+
+
+
+
+
+// scroll menu
+
+
+var $root = $('html, body');
+
+$('a[href^="#"]').click(function () {
+    $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 700);
+
+    return false;
 });
 
 // Scroll по меню ******************************************************
@@ -219,7 +236,6 @@ const element = document.querySelector(".element__country");
 const choices = new Choices(element, {
   searchEnabled: false,
 });
-
 
 
 

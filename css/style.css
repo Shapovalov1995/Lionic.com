@@ -184,7 +184,7 @@ https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js *
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 
 }
 
@@ -1616,6 +1616,7 @@ input[name="email"]:valid {
 }
 
 .footer__social .in {
+
   fill: var(--color-dark-bold);
 }
 

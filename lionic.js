@@ -1,7 +1,7 @@
 // Scroll на верх через кнопку с право в нижнем углу ******************************************************
-
-
-
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// }
 
 function scrollTo(to, duration = 700) {
   const element = document.scrollingElement || document.documentElement,
@@ -52,28 +52,25 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
-
-$(document).ready(function() {
-  $("#submit").click(function() {
-      $(location).prop("href", location.href);
-  })
+$(document).ready(function () {
+  $("#submit").click(function () {
+    $(location).prop("href", location.href);
+  });
 });
-
-
-
-
 
 // scroll menu
 
-
-var $root = $('html, body');
+var $root = $("html, body");
 
 $('a[href^="#"]').click(function () {
-    $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 700);
+  $root.animate(
+    {
+      scrollTop: $($.attr(this, "href")).offset().top,
+    },
+    700
+  );
 
-    return false;
+  return false;
 });
 
 // Scroll по меню ******************************************************
@@ -97,7 +94,6 @@ $('a[href^="#"]').click(function () {
 //   });
 // });
 
-
 // var $root = $('html, body');
 
 // $('a[href^="#"]').click(function() {
@@ -111,8 +107,6 @@ $('a[href^="#"]').click(function () {
 
 //     return false;
 // });
-
-
 
 // Scroll fixed header ******************************************************
 
@@ -236,6 +230,3 @@ const element = document.querySelector(".element__country");
 const choices = new Choices(element, {
   searchEnabled: false,
 });
-
-
-

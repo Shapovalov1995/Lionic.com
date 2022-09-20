@@ -1,4 +1,8 @@
 // Scroll на верх через кнопку с право в нижнем углу ******************************************************
+
+
+
+
 function scrollTo(to, duration = 700) {
   const element = document.scrollingElement || document.documentElement,
     start = element.scrollTop,
@@ -44,24 +48,54 @@ document.addEventListener("DOMContentLoaded", function () {
   // При клике прокручиываем на самый верх
   btn.onclick = function (click) {
     click.preventDefault();
-    scrollTo(0, 600);
+    scrollTo(0, 0);
   };
 });
 
-// Scroll по меню ******************************************************
 
-$(document).ready(function () {
-  var $page = $("html, body");
-  $('a[href*="#"]').click(function () {
-    $page.animate(
-      {
-        scrollTop: $($.attr(this, "href")).offset().top,
-      },
-      700
-    );
-    return false;
-  });
+$(document).ready(function() {
+  $("#submit").click(function() {
+      $(location).prop("href", location.href);
+  })
 });
+
+// Scroll по меню ******************************************************
+// https://codepen.io/decodedcreative/pen/WRzBJd
+// https://codepen.io/iounini/pen/rPKBMR
+// https://sheensay.ru/fixed-scroll
+// https://codepen.io/jpdanks/pen/LYVbbwK
+// https://freefrontend.com/jquery-scrolling-menus/
+// https://misha.agency/css/ssyilki-yakori.html#link-E
+
+// $(document).ready(function () {
+//   var $page = $("html, body");
+//   $('a[href*="#"]').click(function () {
+//     $page.animate(
+//       {
+//         scrollTop: $($.attr(this, "href")).offset().top,
+//       },
+//       700
+//     );
+//     return false;
+//   });
+// });
+
+
+// var $root = $('html, body');
+
+// $('a[href^="#"]').click(function() {
+//     var href = $.attr(this, 'href');
+
+//     $root.animate({
+//         scrollTop: $(href).offset().top
+//     }, 700, function () {
+//         window.location.hash = href;
+//     });
+
+//     return false;
+// });
+
+
 
 // Scroll fixed header ******************************************************
 

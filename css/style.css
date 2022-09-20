@@ -183,6 +183,8 @@ https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js *
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 
 *,
@@ -331,6 +333,15 @@ img {
 
 /* Отсутпы секций */
 
+#services,
+#articles,
+#clients,
+#contacts,
+#join-us {
+  padding-top: 10%;
+  margin-top: -10%;
+}
+
 header {
   padding: 1.5% 0 1.5% 0;
   border-bottom: 1px solid var(--color-white-regular);
@@ -360,14 +371,11 @@ address {
 
 .contacts {
   padding-bottom: 6%;
-
-  /* border-bottom: 1px solid var(--color-white-regular); */
 }
 
 .join-us {
   border-bottom: none;
   padding-bottom: 3%;
-
 }
 
 /* Отсутпы секций end */
@@ -423,7 +431,7 @@ address {
 
 .header__nav .nav__link:focus-visible {
   outline: 1px solid var(--color-blue-light);
-  outline-offset: 4px;
+  outline-offset: 2px;
 }
 
 .header__nav .nav__link:hover::after {
@@ -567,12 +575,6 @@ address {
 
 /* #services *************/
 
-.services {
-  padding-top: %;
-  padding-bottom: %;
-  /* border-bottom: 1px solid var(--color-white-regular); */
-}
-
 .services__list {
   padding-top: 54px;
   display: flex;
@@ -601,6 +603,7 @@ address {
 }
 
 .services__list .services__card {
+  position: relative;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -611,12 +614,38 @@ address {
   width: 270px;
 }
 
+.services__card .card__title-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.services__card .card__title-link:focus-visible::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid var(--color-blue-light);
+  outline-offset: 10px;
+}
 .services__list .services__card:hover {
   transition: var(--transition-normal);
   background-color: var(--color-blue-regular);
 }
 
-.services__card:hover .card__title,
+.services__list .services__card:active {
+  transition: var(--transition-normal);
+  background-color: var(--color-blue-bold);
+}
+
+
+
+.services__card:hover .card__title-link,
 .services__card:hover .card__descr,
 .services__card:hover > svg > path {
   color: var(--color-white-light);
@@ -624,7 +653,7 @@ address {
   fill: var(--color-white-light);
 }
 
-.services__card .card__title {
+.services__card .card__title-link {
   word-break: normal;
   font-family: "Open Sans";
   font-style: normal;
@@ -650,7 +679,7 @@ address {
   margin-bottom: 27px;
 }
 
-.services__card p:not(:last-child) {
+.services__card a:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -715,7 +744,7 @@ address {
   width: 100%;
   height: 100%;
   outline: 1px solid var(--color-blue-light);
-  outline-offset: 8px;
+  outline-offset: 10px;
 }
 
 .articles__card .card__text {

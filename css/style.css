@@ -250,8 +250,8 @@ img {
   /* color */
 
   --color-white-light: #ffffff;
-  --color-white-regular: #dadada;
-  --color-white-medium: #e4e4e4;
+  --color-white-medium: #dadada;
+  --color-white-regular: #e4e4e4;
 
   --color-dark-light: #c4c4c4;
   --color-dark-regular: #787878;
@@ -329,19 +329,58 @@ img {
   font-size: 25px;
 } */
 
-.header {
-  padding-top: 33px;
-  padding-bottom: 26px;
-  border-bottom: 1px solid #e3e3e3;
+/* Отсутпы секций */
 
-  /* position: fixed;
+header {
+  padding: 1.5% 0 1.5% 0;
+  border-bottom: 1px solid var(--color-white-regular);
+}
+
+section,
+address {
+  margin-bottom: 4.5%;
+  border-bottom: 1px solid var(--color-white-regular);
+}
+
+.topBanner {
+  border-bottom: none;
+}
+
+.services {
+  padding-bottom: 8%;
+}
+
+.articles {
+  padding-bottom: 8%;
+}
+
+.clients {
+  padding-bottom: 8%;
+}
+
+.contacts {
+  padding-bottom: 6%;
+
+  /* border-bottom: 1px solid var(--color-white-regular); */
+}
+
+.join-us {
+  border-bottom: none;
+  padding-bottom: 3%;
+
+}
+
+/* Отсутпы секций end */
+
+/* border-bottom: 1px solid #e3e3e3; */
+
+/* position: fixed;
   height: 100px;
   background: #ccc;
   left: 0;
   top: 0;
   float: left;
   width: 100%; */
-}
 
 .header__container {
   display: flex;
@@ -529,9 +568,9 @@ img {
 /* #services *************/
 
 .services {
-  padding-top: 7%;
-  padding-bottom: 160px;
-  border-bottom: 1px solid var(--color-white-regular);
+  padding-top: %;
+  padding-bottom: %;
+  /* border-bottom: 1px solid var(--color-white-regular); */
 }
 
 .services__list {
@@ -541,7 +580,7 @@ img {
 }
 
 .services__title {
-  margin-bottom: 1.7%;
+  margin-bottom: 2.5%;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
@@ -617,14 +656,8 @@ img {
 
 /* articles ***********************/
 
-.articles {
-  padding-top: 6%;
-  padding-bottom: 4%;
-  border-bottom: 1px solid var(--color-white-regular);
-}
-
 .articles__title {
-  margin-bottom: 3.5%;
+  margin-bottom: 4%;
   font-weight: 300;
   font-size: 36px;
   line-height: 130%;
@@ -743,15 +776,8 @@ img {
 
 /* clients **********/
 
-.clients {
-  padding-top: 7%;
-  padding-bottom: 12%;
-  margin-bottom: 84px;
-  border-bottom: 1px solid var(--color-white-regular);
-}
-
 .clients__title {
-  margin-bottom: 40px;
+  margin-bottom: 4%;
   font-weight: 300;
   font-size: 36px;
   line-height: 130%;
@@ -813,18 +839,12 @@ address {
   font-style: normal;
 }
 
-.contacts {
-  padding-bottom: 9%;
-  margin-bottom: 5%;
-  border-bottom: 1px solid var(--color-white-regular);
-}
-
 .contacts .contacts__title {
   font-weight: 300;
   font-size: 36px;
   line-height: 130%;
   color: #1c1c1c;
-  margin-bottom: 9.5%;
+  margin-bottom: 10%;
 }
 
 .contacts .contacts__block {
@@ -900,19 +920,13 @@ address {
 
 /* join-us ***************/
 
-.join-us {
-  padding-top: 110px;
-  padding-bottom: 11.5%;
-  border-bottom: 1px solid var(--color-white-regular);
-}
-
 .join-us__title {
   font-weight: 300;
   font-size: 36px;
   line-height: 130%;
   text-align: center;
   color: #1c1c1c;
-  margin-bottom: 1.6%;
+  margin-bottom: 2%;
 }
 
 .join-us__decsr {
@@ -967,7 +981,7 @@ input {
 .join-us__form .form__block {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 2%;
 }
 
 .form__block .block__left {
@@ -1038,7 +1052,7 @@ input[name="email"]:valid {
   min-height: 60px;
   padding: var(--button__form-padding);
   border-radius: var(--btn-border-radius-v2);
-  margin-bottom: 12px;
+  margin-bottom: 5%;
 }
 
 /* agreement-checkbox ******************************************/
@@ -1476,6 +1490,7 @@ input[name="email"]:valid {
 /* footer ***********************************/
 
 .footer {
+  border-top: 1px solid var(--color-white-medium);
   padding: 45px 0 45px 0;
 }
 

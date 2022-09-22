@@ -1,6 +1,6 @@
 /* Avtor: Shapovalov V B */
 /* Учебный проект */
-
+/* https://codepen.io/davidgilbertson/pen/aBpJzO */
 /* hotels css start */
 /* global start *********************************************************/
 /* Шрифты для lionic.com *********************************************************/
@@ -185,7 +185,6 @@ https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js *
 html {
   box-sizing: border-box;
   /* scroll-behavior: smooth; */
-
 }
 
 *,
@@ -195,7 +194,7 @@ html {
 }
 
 body {
-  min-width: 1200px;
+  min-width: 320px;
   font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-white-light);
   cursor: default;
@@ -234,9 +233,10 @@ p {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .word-break {
@@ -250,6 +250,9 @@ img {
 }
 
 :root {
+  --gap: 30px;
+  --gap-form: 17px;
+
   /* color */
 
   --color-white-light: #ffffff;
@@ -334,7 +337,8 @@ img {
 
 /* Отсутпы секций */
 
-section, address {
+section,
+address {
   padding-top: 10%;
   margin-top: -10%;
 }
@@ -575,7 +579,7 @@ address {
 .services__list {
   padding-top: 54px;
   display: flex;
-  gap: 30px;
+  gap: var(--gap);
 }
 
 .services__title {
@@ -608,7 +612,7 @@ address {
   text-align: center;
   border: 1px solid var(--color-white-regular);
   padding: var(--services__item-padding);
-  width: 270px;
+  width: calc((100%- (var(--gap) * 3)) / 4);
 }
 
 .services__card .card__title-link::before {
@@ -639,8 +643,6 @@ address {
   transition: var(--transition-normal);
   background-color: var(--color-blue-bold);
 }
-
-
 
 .services__card:hover .card__title-link,
 .services__card:hover .card__descr,
@@ -812,20 +814,25 @@ address {
 
 .clients__list {
   display: flex;
-  justify-content: space-between;
+  /* gap: var(--gap); */
+}
+
+.clients__list .clients__card:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients__list .clients__card {
-  min-height: 362px;
-  width: 370px;
+  /* height: 362px; */
+  /* width: calc((100%- (var(--gap) * 2)) / 3); */
   border-radius: 5px;
-  padding: 51px 37px 32px 36px;
+  /* padding: 51px 37px 32px 36px; */
+  padding: 51px 32px;
   border: 1px solid var(--color-dark-light);
 }
 
 .clients__card .comment__text {
   word-break: normal;
-  width: 281px;
+  /* width: 281px; */
   font-weight: 400;
   font-size: 14px;
   line-height: 180%;
@@ -837,7 +844,7 @@ address {
   display: flex;
   align-items: center;
   padding-top: 8.5%;
-  width: 300px;
+  /* width: 300px; */
   border-top: 1px solid var(--color-white-regular);
 }
 
@@ -886,10 +893,11 @@ address {
 
 .contacts__block .contacts__card,
 .contacts__card .visit__text {
+  width: calc((100%- (var(--gap) * 2)) / 3);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 214px;
+  /* width: 214px; */
   min-height: 159px;
 }
 
@@ -1029,7 +1037,7 @@ input {
   border: 1px solid var(--color-white-medium);
   border-radius: 50px;
   padding: 16px 28px;
-  width: 251px;
+
   min-height: 60px;
   box-sizing: border-box;
 }
@@ -1612,7 +1620,6 @@ input[name="email"]:valid {
 }
 
 .footer__social .in {
-
   fill: var(--color-dark-bold);
 }
 

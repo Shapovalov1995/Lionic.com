@@ -236,7 +236,6 @@ p {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-
 }
 
 .word-break {
@@ -391,13 +390,23 @@ address {
   float: left;
   width: 100%; */
 
+
+
+.header__logo {
+  margin-right: auto;
+}
+
+
+
+
 .header__container {
   display: flex;
   align-items: center;
 }
 
 .header__nav {
-  margin-left: auto;
+  padding-top: 10px;
+  margin-right: 57.5px;
   padding-bottom: 8px;
 }
 
@@ -458,7 +467,6 @@ address {
 }
 
 .header__btn {
-  margin-left: var(--header__btn-margin-righ);
   padding: var(--header__btn-padding);
 }
 
@@ -469,7 +477,7 @@ address {
   font-weight: 600;
   font-size: 15px;
   line-height: 20px;
-
+  text-align: center;
   color: var(--color-white-light);
   background-color: var(--color-blue-regular);
   border-radius: var(--btn-border-radius);
@@ -698,9 +706,11 @@ address {
   gap: 30px;
 }
 
+/* width: calc((100%- (var(--gap) * 3)) / 4); */
+
 .articles__content .articles__card {
   position: relative;
-  width: 570px;
+  width: calc((100%- (var(--gap) * 3)) / 4);
   display: flex;
   background-color: var(--color-white-light);
   border-radius: 5px;
@@ -753,7 +763,7 @@ address {
   border: 1px solid var(--color-white-regular);
   border-radius: 0px 5px 5px 0px;
 
-  padding: 23px 30px;
+  padding: 23px 156px 23px 30px;
   border-left: none;
   width: inherit;
   min-height: inherit;
@@ -1153,6 +1163,8 @@ input[name="email"]:valid {
   overflow: hidden;
   margin-bottom: 24px;
   font-size: 16px;
+  border: 1px solid var(--color-white-regular);
+  border-radius: 50px;
 }
 .choices:focus {
   outline: 0;
@@ -1290,8 +1302,7 @@ input[name="email"]:valid {
   width: 251px;
   background-color: var(--color-white-light);
   padding: 5px 28px;
-  border: 1px solid var(--color-white-regular);
-  border-radius: 50px;
+
   min-height: 60px;
   overflow: hidden;
   box-sizing: border-box;

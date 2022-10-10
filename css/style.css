@@ -236,7 +236,7 @@ p {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  width: calc(100vw - 150px);
+  /* width: calc(100vw - 150px); */
 }
 
 .word-break {
@@ -343,8 +343,8 @@ img {
 
 section,
 address {
-  /* padding-top: 10%;
-  margin-top: -10%; */
+  padding-top: 10%;
+  margin-top: -10%;
 }
 
 header {
@@ -522,12 +522,12 @@ address {
 
 /* topBanner *************/
 
-.topBanner {
-  padding: 112px 0;
+.topBanner__decor {
+  padding: 113px 0 134px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url(../img/topbanner.jpg);
+  background-image: url(../img/topbannerx2.jpg);
 }
 
 .topBanner__formulation {

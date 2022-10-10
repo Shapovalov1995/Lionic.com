@@ -545,7 +545,7 @@ address {
   font-size: 40px;
   line-height: 130%;
   color: #1c1c1c;
-  width: 529px;
+  max-width: 529px;
   margin-bottom: 0.7em;
 }
 
@@ -556,7 +556,7 @@ address {
   font-size: 16px;
   line-height: 155%;
   color: #787878;
-  width: 471px;
+  max-width: 471px;
   margin-bottom: 2.2em;
 }
 

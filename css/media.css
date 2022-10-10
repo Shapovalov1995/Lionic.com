@@ -52,5 +52,36 @@
   }
 
 
+  .topBanner__formulation {
+    max-width: 75%;
+  }
+
+
+  .services__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30;
+  }
+
+  .services__card  {
+    max-width: 46%;
+  }
+
+
+
+
+
+  /* .services__list {
+    flex-wrap: wrap;
+    width: calc((100% -(var(--gap))) / 2);
+
+
+  } */
+
+
+  /* .services__card:not(:nth-child(4n)) {
+    gap: var(--gap);
+  } */
 
 }

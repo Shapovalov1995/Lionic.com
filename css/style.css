@@ -709,6 +709,10 @@ address {
 
 /* width: calc((100%- (var(--gap) * 3)) / 4); */
 
+.articles__content .articles__card:nth-child(2n) {
+  /* margin-bottom: 30px; */
+}
+
 .articles__content .articles__card {
   position: relative;
   width: calc((100%- (var(--gap) * 3)) / 4);
@@ -763,11 +767,9 @@ address {
   align-items: flex-start;
   border: 1px solid var(--color-white-regular);
   border-radius: 0px 5px 5px 0px;
-
-  padding: 23px 156px 23px 30px;
   border-left: none;
-  width: inherit;
-  min-height: inherit;
+  padding: 24px;
+  width: 400px;
 }
 
 .card__text .text__time {

@@ -719,6 +719,7 @@ address {
   display: flex;
   background-color: var(--color-white-light);
   border-radius: 5px;
+  width: 48%;
 }
 
 .articles__content .card__text::before {

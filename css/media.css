@@ -70,7 +70,7 @@
     flex-wrap: wrap;
     gap: 30px;
     /* max-width: 553%; */
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 

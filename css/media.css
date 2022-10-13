@@ -75,24 +75,18 @@
 
 
 .articles__content .articles__card {
-
   display: flex;
   flex-wrap: wrap;
-
   gap: 30;
   position: relative;
   /* width: calc((100%- (var(--gap) * 3)) / 4); */
   display: flex;
   background-color: var(--color-white-light);
   border-radius: 5px;
-  width: 46%;
+  /* width: 46%; */
   /* justify-content: flex-start; */
-  /* width: min(600px, 100%); */
-
-
-
+  width: min(347px, 100%);
 }
-
 
 .articles__card .card__text {
   display: flex;
@@ -103,7 +97,7 @@
   border-left: none;
   padding: 24px;
   /* max-width: fit-content; */
-  width: 49%;
+  width: 51%;
 }
   .card__text .text__descr {
     font-weight: 400;

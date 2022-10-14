@@ -129,9 +129,16 @@
 
 
   .footer__container {
-    /* flex-direction: column; */
+    flex-direction: column;
   }
 
+  .footer__right {
+    margin-left: 0;
+  }
 
+  .footer__left {
+    margin-bottom: 1.5em;
+    width: auto;
 
+}
 }

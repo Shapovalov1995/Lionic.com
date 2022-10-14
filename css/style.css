@@ -1627,6 +1627,7 @@ input[name="email"]:valid {
   display: flex;
 }
 
+
 .footer__nav .nav__item:not(:last-child) {
   margin-right: var(--footer-nav__item-margin-righ);
 }
@@ -1729,6 +1730,7 @@ input[name="email"]:valid {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: min(464px, 100%);
 }
 
 .footer__right {

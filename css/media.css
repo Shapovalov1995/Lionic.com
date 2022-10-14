@@ -118,4 +118,20 @@
   /* .services__card:not(:nth-child(4n)) {
     gap: var(--gap);
   } */
+
+
+
+
+  .join-us .join-us__form  {
+    padding: 0;
+  }
+
+
+
+  .footer__container {
+    /* flex-direction: column; */
+  }
+
+
+
 }

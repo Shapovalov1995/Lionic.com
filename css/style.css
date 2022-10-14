@@ -63,8 +63,7 @@ https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js *
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-ExtraBoldItalic.eot");
   src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic"),
-    url("../fonts/OpenSans-ExtraBoldItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/OpenSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"),
     url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff"),
     url("../fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype");
@@ -100,8 +99,7 @@ https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js *
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-SemiBoldItalic.eot");
   src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"),
-    url("../fonts/OpenSans-SemiBoldItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/OpenSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"),
     url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff"),
     url("../fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
@@ -375,7 +373,7 @@ address {
 }
 
 .contacts {
-  padding-bottom: 6%;
+  padding-bottom: 7%;
 }
 
 .join-us {
@@ -488,12 +486,10 @@ address {
 
 .btn:focus-visible {
   transition: all 0.5s ease;
-  background-image: linear-gradient(
-    45deg,
-    var(--color-blue-regular) 0%,
-    var(--color-blue-light) 50%,
-    var(--color-blue-regular) 100%
-  );
+  background-image: linear-gradient(45deg,
+      var(--color-blue-regular) 0%,
+      var(--color-blue-light) 50%,
+      var(--color-blue-regular) 100%);
   color: var(--color-white-light);
   background-repeat: no-repeat;
   background-position: -200% 0, 0 0;
@@ -503,12 +499,10 @@ address {
 
 .btn:hover {
   transition: var(--transition-faster);
-  background-image: linear-gradient(
-    45deg,
-    var(--color-blue-regular) 0%,
-    var(--color-blue-light) 50%,
-    var(--color-blue-regular) 100%
-  );
+  background-image: linear-gradient(45deg,
+      var(--color-blue-regular) 0%,
+      var(--color-blue-light) 50%,
+      var(--color-blue-regular) 100%);
   color: var(--color-white-light);
   background-repeat: no-repeat;
   background-position: -200% 0, 0 0;
@@ -643,6 +637,7 @@ address {
   outline: 1px solid var(--color-blue-light);
   outline-offset: 10px;
 }
+
 .services__list .services__card:hover {
   transition: var(--transition-normal);
   background-color: var(--color-blue-regular);
@@ -655,7 +650,7 @@ address {
 
 .services__card:hover .card__title-link,
 .services__card:hover .card__descr,
-.services__card:hover > svg > path {
+.services__card:hover>svg>path {
   color: var(--color-white-light);
   transition: var(--transition-normal);
   fill: var(--color-white-light);
@@ -886,12 +881,30 @@ address {
   font-style: normal;
 }
 
+
+.contacts__card>svg {
+  margin-bottom: 1.4em;
+}
+
+.visit__blocktel {
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 20px; */
+}
+
+.visit__blockemail {
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 10px; */
+}
+
+
 .contacts .contacts__title {
   font-weight: 300;
   font-size: 36px;
   line-height: 130%;
   color: #1c1c1c;
-  margin-bottom: 10%;
+  margin-bottom: 2.9em;
 }
 
 .contacts .contacts__block {
@@ -901,18 +914,16 @@ address {
   align-items: flex-start;
 }
 
-.contacts__card .visit__svg {
-  margin-bottom: 8%;
-}
+
 
 .contacts__block .contacts__card,
 .contacts__card .visit__text {
-  width: calc((100%- (var(--gap) * 2)) / 3);
+  /* width: calc((100%- (var(--gap) * 2)) / 3); */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   /* width: 214px; */
-  min-height: 159px;
+  /* min-height: 159px; */
 }
 
 .visit__text .text__title {
@@ -920,14 +931,15 @@ address {
   font-size: 17px;
   line-height: 180%;
   color: #1c1c1c;
-  margin-bottom: 14.5%;
+  margin-bottom: 1.7em;
+  /* margin-bottom: 14.5%; */
 }
 
 .visit__text .text__maplink {
   font-weight: 400;
   font-size: 14px;
   line-height: 180%;
-  width: 214px;
+  max-width: 214px;
   word-break: normal;
   color: #787878;
 }
@@ -1124,6 +1136,7 @@ input[name="email"]:valid {
   color: var(--color-blue-light);
   transition: var(--transition-normal);
 }
+
 .button__agreement .agreement__link:active {
   color: var(--color-blue-bold);
 }
@@ -1149,13 +1162,13 @@ input[name="email"]:valid {
   border: 1px solid var(--color-white-medium);
 }
 
-.button__agreement .agreement__checkbox-style > svg > path {
+.button__agreement .agreement__checkbox-style>svg>path {
   stroke: var(--color-blue-regular);
   stroke-width: 2;
   opacity: 0;
 }
 
-#agreement-checkbox-1:checked + #agreement__checkbox-style > svg > path {
+#agreement-checkbox-1:checked+#agreement__checkbox-style>svg>path {
   opacity: 1;
 }
 
@@ -1170,15 +1183,19 @@ input[name="email"]:valid {
   border: 1px solid var(--color-white-regular);
   border-radius: 50px;
 }
+
 .choices:focus {
   outline: 0;
 }
+
 .choices:last-child {
   margin-bottom: 0;
 }
+
 .choices.is-open {
   overflow: visible;
 }
+
 .choices.is-disabled .choices__inner,
 .choices.is-disabled .choices__input {
   background-color: #eaeaea;
@@ -1186,15 +1203,19 @@ input[name="email"]:valid {
   -webkit-user-select: none;
   user-select: none;
 }
+
 .choices.is-disabled .choices__item {
   cursor: not-allowed;
 }
+
 .choices [hidden] {
   display: none !important;
 }
+
 .choices[data-type*="select-one"] {
   cursor: pointer;
 }
+
 .choices[data-type*="select-one"] .choices__inner {
   padding-bottom: 8px;
 }
@@ -1224,16 +1245,17 @@ input[name="email"]:valid {
   border-radius: 10em;
   opacity: 0.25;
 }
+
 .choices[data-type*="select-one"] .choices__button:focus,
 .choices[data-type*="select-one"] .choices__button:hover {
   opacity: 1;
 }
+
 .choices[data-type*="select-one"] .choices__button:focus {
   box-shadow: 0 0 0 2px #00bcd4;
 }
-.choices[data-type*="select-one"]
-  .choices__item[data-value=""]
-  .choices__button {
+
+.choices[data-type*="select-one"] .choices__item[data-value=""] .choices__button {
   display: none;
 }
 
@@ -1253,6 +1275,7 @@ input[name="email"]:valid {
   transition: var(--transition-faster-eio);
   pointer-events: none;
 }
+
 .choices[data-type*="select-one"].is-open::after {
   transition: var(--transition-faster-eio);
   top: 30%;
@@ -1265,16 +1288,19 @@ input[name="email"]:valid {
   left: 11.5px;
   right: auto;
 }
+
 .choices[data-type*="select-one"][dir="rtl"] .choices__button {
   right: auto;
   left: 0;
   margin-left: 25px;
   margin-right: 0;
 }
+
 .choices[data-type*="select-multiple"] .choices__inner,
 .choices[data-type*="text"] .choices__inner {
   cursor: text;
 }
+
 .choices[data-type*="select-multiple"] .choices__button,
 .choices[data-type*="text"] .choices__button {
   position: relative;
@@ -1289,6 +1315,7 @@ input[name="email"]:valid {
   opacity: 0.75;
   border-radius: 0;
 }
+
 .choices[data-type*="select-multiple"] .choices__button:focus,
 .choices[data-type*="select-multiple"] .choices__button:hover,
 .choices[data-type*="text"] .choices__button:focus,
@@ -1325,19 +1352,24 @@ input[name="email"]:valid {
   padding-left: 0;
   list-style: none;
 }
+
 .choices__list--single {
   display: inline-flex;
 }
+
 [dir="rtl"] .choices__list--single {
   padding-right: 4px;
   padding-left: 16px;
 }
+
 .choices__list--single .choices__item {
   width: 100%;
 }
+
 .choices__list--multiple {
   display: inline;
 }
+
 .choices__list--multiple .choices__item {
   display: inline-block;
   vertical-align: middle;
@@ -1353,17 +1385,21 @@ input[name="email"]:valid {
   word-break: break-all;
   box-sizing: border-box;
 }
+
 .choices__list--multiple .choices__item[data-deletable] {
   padding-right: 5px;
 }
+
 [dir="rtl"] .choices__list--multiple .choices__item {
   margin-right: 0;
   margin-left: 3.75px;
 }
+
 .choices__list--multiple .choices__item.is-highlighted {
   background-color: #00a5bb;
   border: 1px solid #008fa1;
 }
+
 .is-disabled .choices__list--multiple .choices__item {
   background-color: #aaa;
   border: 1px solid #919191;
@@ -1386,10 +1422,12 @@ input[name="email"]:valid {
   will-change: visibility;
   color: #000000;
 }
+
 .is-active.choices__list--dropdown,
 .is-active.choices__list[aria-expanded] {
   visibility: visible;
 }
+
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
   padding-top: 4px;
@@ -1401,6 +1439,7 @@ input[name="email"]:valid {
   width: 208px;
   margin-left: 24px;
 }
+
 .is-flipped .choices__list--dropdown,
 .is-flipped .choices__list[aria-expanded] {
   top: auto;
@@ -1428,13 +1467,19 @@ input[name="email"]:valid {
   width: 8px;
   /* ширина scrollbar */
 }
+
 .choices__list::-webkit-scrollbar-track {
-  background: #f4f4f4; /* цвет дорожки */
+  background: #f4f4f4;
+  /* цвет дорожки */
 }
+
 .choices__list::-webkit-scrollbar-thumb {
-  background-color: var(--color-white-regular); /* цвет плашки */
-  border-radius: 20px; /* закругления плашки */
-  border: none; /* padding вокруг плашки */
+  background-color: var(--color-white-regular);
+  /* цвет плашки */
+  border-radius: 20px;
+  /* закругления плашки */
+  border: none;
+  /* padding вокруг плашки */
 }
 
 /* текст внутри  */
@@ -1466,22 +1511,27 @@ input[name="email"]:valid {
   background-color: var(--color-blue-regular);
   color: white;
 }
+
 .choices__list--dropdown .choices__item--selectable.is-highlighted::after,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
   opacity: 0.5;
 }
+
 .choices__item {
   cursor: default;
 }
+
 .choices__item--selectable {
   cursor: pointer;
 }
+
 .choices__item--disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   user-select: none;
   opacity: 0.5;
 }
+
 .choices__heading {
   font-weight: 600;
   font-size: 12px;
@@ -1489,6 +1539,7 @@ input[name="email"]:valid {
   border-bottom: 1px solid #f7f7f7;
   color: gray;
 }
+
 .choices__button {
   text-indent: -9999px;
   -webkit-appearance: none;
@@ -1499,24 +1550,28 @@ input[name="email"]:valid {
   background-position: center;
   cursor: pointer;
 }
+
 .choices__button:focus,
 .choices__input:focus {
   outline: 0;
 }
-.choices__input {
-}
+
+.choices__input {}
+
 .choices__input::-webkit-search-cancel-button,
 .choices__input::-webkit-search-decoration,
 .choices__input::-webkit-search-results-button,
 .choices__input::-webkit-search-results-decoration {
   display: none;
 }
+
 .choices__input::-ms-clear,
 .choices__input::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
+
 [dir="rtl"] .choices__input {
   padding-right: 2px;
   padding-left: 0;
@@ -1558,7 +1613,7 @@ input[name="email"]:valid {
 }
 
 .footer__nav {
-  margin-left: 17%;
+  margin-right: 3.5em;
 }
 
 .footer__caption {
@@ -1640,28 +1695,45 @@ input[name="email"]:valid {
 
 /* hover */
 
-.footer__social .icon__twitter:hover > svg > path,
+.footer__social .icon__twitter:hover>svg>path,
 .footer__social .in:hover {
   fill: var(--color-blue-light);
   transition: var(--transition-normal);
 }
-.footer__social .icon__mail:hover > svg > path {
+
+.footer__social .icon__mail:hover>svg>path {
   stroke: var(--color-blue-light);
   transition: var(--transition-normal);
 }
 
 /* active */
 
-.footer__social .icon__twitter:active > svg > path,
+.footer__social .icon__twitter:active>svg>path,
 .footer__social .in:active {
   fill: var(--color-blue-regular);
 }
-.footer__social .icon__mail:active > svg > path {
+
+.footer__social .icon__mail:active>svg>path {
   stroke: var(--color-blue-regular);
 }
+
 /* focus */
 
 .footer__social .link:focus-visible {
   outline-offset: 4px;
   outline: 1px solid var(--color-blue-light);
+}
+
+
+.footer__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
 }

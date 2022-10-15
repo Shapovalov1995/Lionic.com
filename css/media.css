@@ -141,7 +141,18 @@
 }
 
 
+}
+@media (max-width: 768px) {
 
+  .articles__content .articles__card {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .articles__card .card__text  {
+     width: auto;
+
+  }
 
 }
+

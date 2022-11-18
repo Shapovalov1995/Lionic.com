@@ -63,7 +63,8 @@ https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js *
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-ExtraBoldItalic.eot");
   src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic"),
-    url("../fonts/OpenSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-ExtraBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
     url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"),
     url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff"),
     url("../fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype");
@@ -99,7 +100,8 @@ https://newqos.com/zametki-yuzera/42-maska-vvoda-nomera-telefona-na-chistom-js *
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-SemiBoldItalic.eot");
   src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"),
-    url("../fonts/OpenSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-SemiBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
     url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"),
     url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff"),
     url("../fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
@@ -486,10 +488,12 @@ address {
 
 .btn:focus-visible {
   transition: all 0.5s ease;
-  background-image: linear-gradient(45deg,
-      var(--color-blue-regular) 0%,
-      var(--color-blue-light) 50%,
-      var(--color-blue-regular) 100%);
+  background-image: linear-gradient(
+    45deg,
+    var(--color-blue-regular) 0%,
+    var(--color-blue-light) 50%,
+    var(--color-blue-regular) 100%
+  );
   color: var(--color-white-light);
   background-repeat: no-repeat;
   background-position: -200% 0, 0 0;
@@ -499,10 +503,12 @@ address {
 
 .btn:hover {
   transition: var(--transition-faster);
-  background-image: linear-gradient(45deg,
-      var(--color-blue-regular) 0%,
-      var(--color-blue-light) 50%,
-      var(--color-blue-regular) 100%);
+  background-image: linear-gradient(
+    45deg,
+    var(--color-blue-regular) 0%,
+    var(--color-blue-light) 50%,
+    var(--color-blue-regular) 100%
+  );
   color: var(--color-white-light);
   background-repeat: no-repeat;
   background-position: -200% 0, 0 0;
@@ -650,7 +656,7 @@ address {
 
 .services__card:hover .card__title-link,
 .services__card:hover .card__descr,
-.services__card:hover>svg>path {
+.services__card:hover > svg > path {
   color: var(--color-white-light);
   transition: var(--transition-normal);
   fill: var(--color-white-light);
@@ -881,8 +887,7 @@ address {
   font-style: normal;
 }
 
-
-.contacts__card>svg {
+.contacts__card > svg {
   margin-bottom: 1.4em;
 }
 
@@ -898,7 +903,6 @@ address {
   /* padding-top: 10px; */
 }
 
-
 .contacts .contacts__title {
   font-weight: 300;
   font-size: 36px;
@@ -913,8 +917,6 @@ address {
   justify-content: space-between;
   align-items: flex-start;
 }
-
-
 
 .contacts__block .contacts__card,
 .contacts__card .visit__text {
@@ -1162,13 +1164,13 @@ input[name="email"]:valid {
   border: 1px solid var(--color-white-medium);
 }
 
-.button__agreement .agreement__checkbox-style>svg>path {
+.button__agreement .agreement__checkbox-style > svg > path {
   stroke: var(--color-blue-regular);
   stroke-width: 2;
   opacity: 0;
 }
 
-#agreement-checkbox-1:checked+#agreement__checkbox-style>svg>path {
+#agreement-checkbox-1:checked + #agreement__checkbox-style > svg > path {
   opacity: 1;
 }
 
@@ -1255,7 +1257,9 @@ input[name="email"]:valid {
   box-shadow: 0 0 0 2px #00bcd4;
 }
 
-.choices[data-type*="select-one"] .choices__item[data-value=""] .choices__button {
+.choices[data-type*="select-one"]
+  .choices__item[data-value=""]
+  .choices__button {
   display: none;
 }
 
@@ -1556,7 +1560,8 @@ input[name="email"]:valid {
   outline: 0;
 }
 
-.choices__input {}
+.choices__input {
+}
 
 .choices__input::-webkit-search-cancel-button,
 .choices__input::-webkit-search-decoration,
@@ -1627,7 +1632,6 @@ input[name="email"]:valid {
   display: flex;
 }
 
-
 .footer__nav .nav__item:not(:last-child) {
   margin-right: var(--footer-nav__item-margin-righ);
 }
@@ -1696,25 +1700,25 @@ input[name="email"]:valid {
 
 /* hover */
 
-.footer__social .icon__twitter:hover>svg>path,
+.footer__social .icon__twitter:hover > svg > path,
 .footer__social .in:hover {
   fill: var(--color-blue-light);
   transition: var(--transition-normal);
 }
 
-.footer__social .icon__mail:hover>svg>path {
+.footer__social .icon__mail:hover > svg > path {
   stroke: var(--color-blue-light);
   transition: var(--transition-normal);
 }
 
 /* active */
 
-.footer__social .icon__twitter:active>svg>path,
+.footer__social .icon__twitter:active > svg > path,
 .footer__social .in:active {
   fill: var(--color-blue-regular);
 }
 
-.footer__social .icon__mail:active>svg>path {
+.footer__social .icon__mail:active > svg > path {
   stroke: var(--color-blue-regular);
 }
 
@@ -1725,12 +1729,11 @@ input[name="email"]:valid {
   outline: 1px solid var(--color-blue-light);
 }
 
-
 .footer__left {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: min(464px, 100%);
+  width: min(330px, 38%);
 }
 
 .footer__right {

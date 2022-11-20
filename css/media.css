@@ -264,4 +264,14 @@
   .services__list {
     padding: 0;
   }
+
+  .services__card > svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .services__card .card__heart {
+    width: 56px;
+    height: 42px;
+  }
 }

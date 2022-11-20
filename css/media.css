@@ -274,4 +274,56 @@
     width: 56px;
     height: 42px;
   }
+
+  .services__card .card__title-link {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    /* identical to box height, or 21px */
+
+    text-align: center;
+
+    color: #1c1c1c;
+  }
+
+  .topBanner__descr {
+     font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+
+  color: #787878;
+  }
+
+
+
+  .services__card .card__descr {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* or 18px */
+
+    min-width: 102px;
+    text-align: center;
+
+    color: #787878;
+  }
+
+  .services__list .services__card {
+    min-height: 226px;
+    padding: 16px;
+  }
+
+  .services__card svg {
+    margin-bottom: 14px;
+  }
+
+  .services__card a:not(:last-child) {
+    margin-bottom: 2px;
+  }
 }

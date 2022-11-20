@@ -239,9 +239,9 @@ p {
   /* width: calc(100vw - 150px); */
 }
 
-.word-break {
+/* .word-break {
   word-break: break-all;
-}
+} */
 
 img {
   max-width: 100%;

@@ -10,6 +10,11 @@
 }
 /************************************************************992px*/
 @media (max-width: 992px) {
+  /* :hover,
+  :active {
+    pointer-events: none;
+  } */
+
   .header__nav {
     display: none;
   }
@@ -144,6 +149,11 @@
 
 /************************************************************768px*/
 @media (max-width: 768px) {
+  /* :hover,
+  :active {
+    pointer-events: none;
+  } */
+
   .articles__content {
     display: flex;
     flex-wrap: wrap;
@@ -206,8 +216,13 @@
 /************************************************************576px*/
 
 @media (max-width: 576px) {
+  /* :hover,
+  :active {
+    pointer-events: none;
+  } */
+
   :root {
-    --gap: 23px;
+    --gap: 17px;
   }
 
   .services__list {
@@ -319,7 +334,7 @@
   .services__list .services__card {
     min-height: 220px;
     padding: 16px;
-    max-width: min(600px, 46%);
+    max-width: min(600px, 47%);
   }
 
   .services__card svg {
@@ -329,4 +344,96 @@
   .services__card a:not(:last-child) {
     margin-bottom: 2px;
   }
+
+  .services {
+    padding-bottom: 3.8em;
+    margin-bottom: 3.8em;
+  }
+
+  .articles__title {
+    margin-bottom: 15px;
+  }
+
+  .articles__content .articles__card > img {
+    min-height: 191px;
+    max-width: 86px;
+  }
+
+  .articles__content .articles__card {
+    flex-direction: row;
+    /* display: flex; */
+    /* width: min(313px, 40%); */
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .articles__content {
+    gap: 15px;
+  }
+
+  .articles__card .card__text {
+    max-width: 100%;
+    border-radius: 0px 5px 5px 0px;
+    padding: 0;
+    border: 1px solid var(--color-white-regular);
+    border-left: none;
+  }
+
+  .card__text .text__time {
+    line-height: 150%;
+    margin-bottom: 4px;
+  }
+
+  .card__text .text__title {
+    line-height: 130%;
+    margin-bottom: 1px;
+  }
+
+  .card__text .text__descr {
+    line-height: 150%;
+    max-width: 160px;
+  }
+
+  #toTop.show {
+    display: none;
+  }
+
+  /* .articles__card .card__text:hover {
+    pointer-events: none;
+  } */
+
+  /* .articles__content .card__text:hover::before {
+    pointer-events: none;
+  }
+
+  .articles__card .card__text:active {
+    pointer-events: none;
+  }
+
+  .card__text:hover .text__time,
+  .card__text:hover .text__title,
+  .card__text:hover .text__descr {
+    pointer-events: none;
+  } */
+
+  /* .articles__content:hover {
+
+    pointer-events: none;
+  } */
+
+  /* :hover,
+  :active {
+    pointer-events: none;
+  } */
+
+  /* button {
+    pointer-events: initial;
+  }  */
+
+  /* .card__text:hover .text__time,
+  .card__text:hover .text__title,
+  .card__text:hover .text__descr {
+    color: var(--color-white-light);
+  } */
 }

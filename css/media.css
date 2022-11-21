@@ -399,41 +399,8 @@
     display: none;
   }
 
-  /* .articles__card .card__text:hover {
-    pointer-events: none;
-  } */
-
-  /* .articles__content .card__text:hover::before {
-    pointer-events: none;
-  }
-
-  .articles__card .card__text:active {
-    pointer-events: none;
-  }
-
-  .card__text:hover .text__time,
-  .card__text:hover .text__title,
-  .card__text:hover .text__descr {
-    pointer-events: none;
-  } */
-
-  /* .articles__content:hover {
-
-    pointer-events: none;
-  } */
-
   /* :hover,
   :active {
     pointer-events: none;
-  } */
-
-  /* button {
-    pointer-events: initial;
-  }  */
-
-  /* .card__text:hover .text__time,
-  .card__text:hover .text__title,
-  .card__text:hover .text__descr {
-    color: var(--color-white-light);
   } */
 }

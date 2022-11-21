@@ -207,7 +207,11 @@
 
 @media (max-width: 576px) {
   :root {
-    --gap: 15px;
+    --gap: 19px;
+  }
+
+  .services__list {
+    justify-content: ;
   }
 
   .header {
@@ -289,16 +293,14 @@
   }
 
   .topBanner__descr {
-     font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 25px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
 
-  color: #787878;
+    color: #787878;
   }
-
-
 
   .services__card .card__descr {
     font-family: "Open Sans";
@@ -315,8 +317,9 @@
   }
 
   .services__list .services__card {
-    min-height: 226px;
+    min-height: 220px;
     padding: 16px;
+    max-width: min(600px, 46%);
   }
 
   .services__card svg {

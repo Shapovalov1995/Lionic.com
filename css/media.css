@@ -207,7 +207,7 @@
 
 @media (max-width: 576px) {
   :root {
-    --gap: 19px;
+    --gap: 23px;
   }
 
   .services__list {

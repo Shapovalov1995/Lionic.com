@@ -407,4 +407,36 @@
   :active {
     pointer-events: none;
   } */
+
+  .articles {
+    margin-bottom: 4em;
+    padding-bottom: 3.7em;
+  }
+
+  .clients__list .clients__card {
+    width: 100%;
+  }
+
+  section {
+    margin-bottom: 0;
+  }
+
+  .clients__list {
+    gap: 15px;
+  }
+
+  .clients__card .comment__text {
+    width: 100%;
+    margin-bottom: 12%;
+  }
+
+  .clients__card .comment__block {
+    padding-top: 10.5%;
+  }
+
+  .clients__card .comment__block {
+
+    width: 100%;
+
+}
 }

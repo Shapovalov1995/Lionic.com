@@ -464,4 +464,25 @@
   .contacts__block .contacts__card:not(:last-child) {
     margin-bottom: 2em;
   }
+
+  .join-us__title {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 130%;
+    text-align: start;
+    color: #1c1c1c;
+    margin-bottom: 2%;
+  }
+
+  .join-us__decsr {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: start;
+    color: #787878;
+    margin-bottom: 3%;
+  }
+
 }

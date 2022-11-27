@@ -435,8 +435,33 @@
   }
 
   .clients__card .comment__block {
-
     width: 100%;
+  }
 
-}
+  .clients {
+    padding-bottom: 3.5em;
+    margin-bottom: 4em;
+  }
+
+  .contacts .contacts__block {
+    display: block;
+    /* gap: 16%; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+  }
+
+  .contacts .contacts__title {
+    margin-bottom: 0.4em;
+  }
+
+  .contacts__card > svg {
+    margin-bottom: 0.5em;
+  }
+  .visit__text .text__title {
+    margin-bottom: 0.6em;
+  }
+
+  .contacts__block .contacts__card:not(:last-child) {
+    margin-bottom: 2em;
+  }
 }

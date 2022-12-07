@@ -505,4 +505,39 @@
   .form__block .block__right {
     width: 100%;
   }
+
+  .block__right .element__comment {
+    padding: 16px 28px;
+    width: 100%;
+    min-height: 240px;
+    padding-left: 19px;
+  }
+
+  .form__block .block__left,
+  .form__block .block__right {
+    width: 100%;
+    margin-bottom: 0.9em;
+  }
+
+  .form__block .block__left {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .block__left .element__name,
+  .block__left .element__email,
+  .block__left .element__phone {
+    padding: 19px 19px;
+  }
+
+  .choices__inner {
+    padding-left: 19px;
+  }
+
+  .choices[data-type*="select-one"]::after {
+    right: 18px;
+    top: 47%;
+  }
 }

@@ -485,4 +485,24 @@
     margin-bottom: 3%;
   }
 
+  .contacts {
+    padding-bottom: 3.7em;
+    margin-bottom: 3.8em;
+  }
+
+  .join-us__title {
+    margin-bottom: 0.4em;
+  }
+  .join-us__decsr {
+    margin-bottom: 2.3em;
+  }
+
+  .join-us__form .form__block {
+    flex-wrap: wrap;
+  }
+
+  .form__block .block__left,
+  .form__block .block__right {
+    width: 100%;
+  }
 }

@@ -509,14 +509,14 @@
   .block__right .element__comment {
     padding: 16px 28px;
     width: 100%;
-    min-height: 240px;
+    min-height: 235px;
     padding-left: 19px;
   }
 
   .form__block .block__left,
   .form__block .block__right {
     width: 100%;
-    margin-bottom: 0.9em;
+    margin-bottom: 0.8em;
   }
 
   .form__block .block__left {
@@ -539,5 +539,38 @@
   .choices[data-type*="select-one"]::after {
     right: 18px;
     top: 47%;
+  }
+
+  .form__button .button__form {
+    width: 100%;
+  }
+
+  .join-us .join-us__form {
+    align-items: stretch;
+  }
+
+  .join-us {
+    padding-bottom: 3.7em;
+  }
+
+  .footer__container {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column-reverse;
+  }
+
+  .footer__right {
+    display: initial;
+  }
+
+  .footer__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__nav .nav__list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
